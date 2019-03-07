@@ -6,3 +6,9 @@
     z-index: 99;
     opacity: 0.5;
 }
+
+@media only screen and (min-width: 1440px) {
+    #myBtn {
+        opacity: 0;
+    }
+  }
