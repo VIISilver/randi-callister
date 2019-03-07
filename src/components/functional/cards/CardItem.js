@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-// import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
 import FlashOn from '@material-ui/icons/FlashOn';
 import ButtonBar from '../buttons/ButtonBar';
+import Grid from '@material-ui/core/Grid';
 
 const styles = theme => ({
   paper: {
@@ -77,6 +77,7 @@ class CardItem extends Component {
     const { classes } = this.props;
 
     return (
+      <Grid item xs={12} sm={6}>
       <div className={classes.root}>
         <Paper className={classes.paper}>
           <div className={classes.itemContainer}>
@@ -86,27 +87,20 @@ class CardItem extends Component {
               </Avatar>
             </div>
             <div className={classes.baseline}>
-              {/* <div className={classes.inline}>
+              <div className={classes.inlineRight}>
+                <Typography variant="h4" gutterBottom>
+                  Training Programs
+              </Typography>
                 <Typography style={{ textTransform: 'uppercase' }} color='secondary' gutterBottom>
-                  Months
-                </Typography>
-                <Typography variant="h6" gutterBottom>
-                  4 month(s)
-                </Typography>
-              </div> */}
-            <div className={classes.inlineRight}>
-              <Typography variant="h4" gutterBottom>
-                Training Programs
+                  6-week fat loss and conditioning program available
               </Typography>
-              <Typography style={{ textTransform: 'uppercase' }} color='secondary' gutterBottom>
-              6-week fat loss and conditioning program available
-              </Typography>
-              <ButtonBar />
-            </div>
+                <ButtonBar />
+              </div>
             </div>
           </div>
         </Paper>
       </div>
+      </Grid>
     )
   }
 }

@@ -6,6 +6,10 @@ import Grid from '@material-ui/core/Grid';
 import CardItem from '../functional/cards/CardItem';
 import SectionHeader from '../functional/typo/SectionHeader';
 import CardMedia from '@material-ui/core/CardMedia';
+import Fab from '@material-ui/core/Fab';
+import NavigationIcon from '@material-ui/icons/Navigation';
+import ScrollTop from '../functional/buttons/ScrollTop';
+import './Home.css';
 
 const topImage = require('../../assets/image2.jpg');
 const backgroundShape = require('../../assets/shape.svg');
@@ -27,7 +31,7 @@ const styles = theme => ({
   media: {
     // ⚠️ object-fit is not supported by IE 11.
     objectFit: 'cover',
-    height: 1000
+    height: "100vh"
   }
 })
 
@@ -35,7 +39,7 @@ class Home extends Component {
 
   render() {
     const { classes } = this.props;
-    const currentPath = this.props.location.pathname
+    const currentPath = this.props.location.pathname;
 
     return (
       <React.Fragment>
@@ -49,33 +53,23 @@ class Home extends Component {
         <div className={classes.root}>
           <Grid container justify="center">
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
-              <Grid item xs={12} sm={6} md={6} lg={6}>
-                <CardItem />
+              <CardItem />
+              <Grid item xs={12} sm={6}>
+                <SectionHeader title="Hey there, I'm Randi" subtitle="Esse aute nisi enim consequat dolor laboris do do id." />
               </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={6}>
-              <SectionHeader title="Hey there, I'm Randi" subtitle="Esse aute nisi enim consequat dolor laboris do do id." />
+              <Grid item xs={12}>
+                <CardMedia
+                  component="img"
+                  image={topImage}
+                />
               </Grid>
-              <Grid item xs={12} sm={12} md={12} lg={12}>
-              <CardMedia
-                component="img"
-                className={classes.media}
-                image={topImage}
-              />
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={6}>
-                <CardItem />
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={6}>
-                <CardItem />
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={6}>
-                <CardItem />
-              </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={6}>
-                <CardItem />
-              </Grid>
+              <CardItem />
+              <CardItem />
+              <CardItem />
+              <CardItem />
             </Grid>
           </Grid>
+          <ScrollTop />
         </div>
       </React.Fragment>
     )
