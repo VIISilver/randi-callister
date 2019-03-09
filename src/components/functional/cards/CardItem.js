@@ -7,6 +7,8 @@ import FlashOn from '@material-ui/icons/FlashOn';
 import ButtonBar from '../buttons/ButtonBar';
 import Grid from '@material-ui/core/Grid';
 
+// const fire = require('../../../assets/fire.svg');
+
 const styles = theme => ({
   paper: {
     padding: theme.spacing.unit * 3,
@@ -84,6 +86,7 @@ class CardItem extends Component {
             <div className={classes.avatarContainer}>
               <Avatar className={classes.avatar}>
                 <FlashOn />
+                {/* fire */}
               </Avatar>
             </div>
             <div className={classes.baseline}>

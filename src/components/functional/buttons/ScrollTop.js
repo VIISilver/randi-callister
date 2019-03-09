@@ -14,42 +14,58 @@ class ScrollTop extends Component {
     constructor(props) {
         super(props);
         this.topFunction = this.topFunction.bind(this);
+        this.scrollFunction = this.scrollFunction.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
     }
 
-    componentDidMount() {
-        window.onscroll = function () { scrollFunction() };
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("myBtn").style.display = "block";
-            } else {
-                document.getElementById("myBtn").style.display = "none";
-            }
-        }
+    handleScroll() {
+        this.scrollFunction();
     }
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    };
 
     // When the user clicks on the button, scroll to the top of the document
     topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        // For Safari
+        document.body.scrollTop = 0;
+        // For Chrome, Firefox, IE and Opera
+        document.documentElement.scrollTop = 0;
     };
 
     render() {
         const { classes } = this.props;
 
         return (
-            <React.Fragment>
-                <Fab
-                    id="myBtn"
-                    variant="extended"
-                    size="small"
-                    color="primary"
-                    aria-label="Add"
-                    onClick={this.topFunction}
-                    className={classes.margin}
-                >
-                    <NavigationIcon />
-                </Fab>
-            </React.Fragment>
+            <div
+                style={{ overflowY: 'scroll' }}
+                onScroll={this.handleScroll}
+            >
+                <React.Fragment>
+                    <Fab
+                        id="myBtn"
+                        variant="extended"
+                        size="small"
+                        color="secondary"
+                        aria-label="Add"
+                        onClick={this.topFunction}
+                        className={classes.margin}
+                    >
+                        <NavigationIcon />
+                    </Fab>
+                </React.Fragment>
+            </div>
         )
     }
 }

@@ -6,20 +6,16 @@ import Grid from '@material-ui/core/Grid';
 import CardItem from '../functional/cards/CardItem';
 import SectionHeader from '../functional/typo/SectionHeader';
 import CardMedia from '@material-ui/core/CardMedia';
-import Fab from '@material-ui/core/Fab';
-import NavigationIcon from '@material-ui/icons/Navigation';
 import ScrollTop from '../functional/buttons/ScrollTop';
 import './Home.css';
 
 const topImage = require('../../assets/image2.jpg');
-const backgroundShape = require('../../assets/shape.svg');
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.grey['A500'],
     overflow: 'hidden',
-    background: `url(${backgroundShape}) no-repeat`,
     backgroundSize: 'cover',
     backgroundPosition: '0 400px',
     padding: 20,
@@ -31,7 +27,7 @@ const styles = theme => ({
   media: {
     // ⚠️ object-fit is not supported by IE 11.
     objectFit: 'cover',
-    height: "100vh"
+    height: "95vh"
   }
 })
 
