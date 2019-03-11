@@ -7,6 +7,7 @@ import CardItem from '../functional/cards/CardItem';
 import SectionHeader from '../functional/typo/SectionHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import ScrollTop from '../functional/buttons/ScrollTop';
+import Footer from '../functional/footer/Footer';
 import './Home.css';
 
 const topImage = require('../../assets/image2.jpg');
@@ -67,6 +68,7 @@ class Home extends Component {
           </Grid>
           <ScrollTop />
         </div>
+          <Footer />
       </React.Fragment>
     )
   }

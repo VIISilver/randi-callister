@@ -114,7 +114,6 @@ class Contact extends Component {
                                     />
 
                                     <TextField
-                                        id="outlined-select-currency-native"
                                         select
                                         label="Native select"
                                         className={classes.textField}

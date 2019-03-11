@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Link, withRouter } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
@@ -57,7 +57,7 @@ const styles = theme => ({
     }
   },
   iconButton: {
-    float: 'right'
+    float: 'right',
   },
   tabContainer: {
     marginLeft: 32,
