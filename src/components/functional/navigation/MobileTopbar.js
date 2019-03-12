@@ -32,19 +32,13 @@ const styles = theme => ({
     display: 'flex',
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
-      justifyContent: 'space-evenly',
+      justifyContent: 'space-between',
       alignItems: 'center'
     }
   },
   link: {
     textDecoration: 'none',
     color: 'inherit'
-  },
-  productLogo: {
-    display: 'inline-block',
-    borderLeft: `1px solid ${theme.palette.grey['A100']}`,
-    marginLeft: 32,
-    paddingLeft: 24
   },
   tagline: {
     display: 'inline-block',
