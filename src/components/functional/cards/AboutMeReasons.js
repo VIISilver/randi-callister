@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 
+const firstImage = require('../../../assets/image3.jpg');
 const secondImage = require('../../../assets/image4.jpg');
 
 const styles = theme => ({
@@ -34,7 +35,7 @@ const styles = theme => ({
   }
 })
 
-class AboutCard extends Component {
+class AboutMeReasons extends Component {
 
   render() {
     const { classes } = this.props;
@@ -46,15 +47,20 @@ class AboutCard extends Component {
             <CardMedia
               component="img"
               className={classes.media}
-              image={secondImage}
+              image={firstImage}
             />
             <CardHeader
               className={classes.textOverImage}
               title={
-                <Typography variant="h3" className={classes.imageText}>
-                  About me
+                <Typography variant="h6" className={classes.imageText}>
+                  My Story
                   </Typography>
               }
+            //   subheader={
+            //     <Typography variant="body2" className={classes.imageText}>
+            //       My Story
+            //       </Typography>
+            //   }
             />
           </div>
         </Grid>
@@ -63,4 +69,4 @@ class AboutCard extends Component {
   }
 }
 
-export default withStyles(styles)(AboutCard);
+export default withStyles(styles)(AboutMeReasons);

@@ -5,6 +5,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import CardItem from '../functional/cards/CardItem';
 import AboutCard from '../functional/cards/AboutCard.js';
+import AboutMeText from '../functional/cards/AboutMeText.js';
+import AboutMeReasons from '../functional/cards/AboutMeReasons.js';
 import SectionHeader from '../functional/typo/SectionHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import ScrollTop from '../functional/buttons/ScrollTop';
@@ -46,12 +48,9 @@ class About extends Component {
       <React.Fragment>
         <CssBaseline />
         <MobileTopbar currentPath={currentPath} />
-        <CardMedia
-          component="img"
-          className={classes.media}
-          image={firstImage}
-        />
         <AboutCard />
+        <AboutMeText />
+        <AboutMeReasons />
         <CardMedia
           component="img"
           className={classes.media}
