@@ -2,21 +2,12 @@ import React, { Component } from 'react';
 import MobileTopbar from '../functional/navigation/MobileTopbar';
 import withStyles from '@material-ui/core/styles/withStyles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
-import CardItem from '../functional/cards/CardItem';
 import AboutCard from '../functional/cards/AboutCard.js';
 import AboutMeText from '../functional/cards/AboutMeText.js';
 import AboutMeReasons from '../functional/cards/AboutMeReasons.js';
-import SectionHeader from '../functional/typo/SectionHeader';
-import CardMedia from '@material-ui/core/CardMedia';
+import MyTeamAbout from '../functional/cards/MyTeamAbout.js';
 import ScrollTop from '../functional/buttons/ScrollTop';
 import Footer from '../functional/footer/Footer';
-
-const firstImage = require('../../assets/image3.jpg');
-const secondImage = require('../../assets/image4.jpg');
-const thirdImage = require('../../assets/image5.jpg');
-const fourthImage = require('../../assets/image6.jpg');
-const fifthImage = require('../../assets/image7.jpg');
 
 const styles = theme => ({
   root: {
@@ -51,48 +42,9 @@ class About extends Component {
         <AboutCard />
         <AboutMeText />
         <AboutMeReasons />
-        <CardMedia
-          component="img"
-          className={classes.media}
-          image={secondImage}
-        />
-        <CardMedia
-          component="img"
-          className={classes.media}
-          image={thirdImage}
-        />
-        <CardMedia
-          component="img"
-          className={classes.media}
-          image={fourthImage}
-        />
-        <CardMedia
-          component="img"
-          className={classes.media}
-          image={fifthImage}
-        />
-        {/* <div className={classes.root}>
-          <Grid container justify="center">
-            <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
-              <CardItem />
-              <Grid item xs={12} sm={6}>
-                <SectionHeader title="Hey there, I'm Randi" subtitle="Esse aute nisi enim consequat dolor laboris do do id." />
-              </Grid>
-              <Grid item xs={12}>
-                <CardMedia
-                  component="img"
-                  image={topImage}
-                />
-              </Grid>
-              <CardItem />
-              <CardItem />
-              <CardItem />
-              <CardItem />
-            </Grid>
-          </Grid>
-        </div> */}
-          <ScrollTop />
-          <Footer />
+        <MyTeamAbout />
+        <ScrollTop />
+        <Footer />
       </React.Fragment>
     )
   }
