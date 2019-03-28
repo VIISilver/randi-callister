@@ -31,7 +31,7 @@ const styles = theme => ({
     textOverImage: {
         display: 'flex',
         flexDirection: 'column',
-        padding: 0,
+        padding: 10,
         marginLeft: 20,
         position: 'absolute',
         top: 27,
@@ -58,10 +58,10 @@ class AboutMeReasons extends Component {
                         <div className={classes.textOverImage}>
                             <Typography variant="h6" className={classes.imageText}>
                                 My Story
-                  </Typography>
+                            </Typography>
                             <Typography variant="body2" className={classes.imageText}>
                                 Tempor duis id laboris Lorem adipisicing ad sunt reprehenderit. Aute enim laboris eiusmod velit. Voluptate commodo quis Lorem id est ea deserunt eu commodo elit commodo ipsum. Ipsum laborum nisi dolor est amet reprehenderit veniam consectetur consectetur irure deserunt.
-                  </Typography>
+                            </Typography>
                         </div>
                     </div>
                 </Grid>

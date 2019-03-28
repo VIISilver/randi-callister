@@ -30,7 +30,7 @@ class AboutMeText extends Component {
           <Typography variant="body2">
             Incididunt exercitation Lorem velit elit sit occaecat dolor irure Lorem id. Est aliquip ullamco laboris cillum eiusmod ullamco excepteur deserunt. Consequat anim et eiusmod mollit qui excepteur est culpa minim minim pariatur pariatur culpa pariatur. Nulla proident esse reprehenderit pariatur ullamco cupidatat duis nulla id occaecat. Velit quis non tempor officia.
                   </Typography>
-          <Typography variant="body2">
+          {/* <Typography variant="body2">
             Commodo sunt nostrud cillum eu et. Laboris sint do minim duis culpa anim consectetur. Laborum irure pariatur consectetur in. Quis excepteur aliqua sit id culpa sint. Exercitation enim ullamco amet occaecat duis ipsum aliqua nulla exercitation esse dolore tempor ex nulla. Eu tempor reprehenderit eiusmod id occaecat ex do. Culpa id ex eiusmod anim quis in cupidatat fugiat.
                   </Typography>
           <Typography variant="body2">
@@ -38,7 +38,7 @@ class AboutMeText extends Component {
                   </Typography>
           <Typography variant="body2">
             Consequat laboris consectetur quis minim et enim nostrud et eu aute ea tempor ea voluptate. Consectetur nostrud ex minim consequat esse ex pariatur duis reprehenderit minim amet. Lorem ex pariatur est ullamco.
-                  </Typography>
+                  </Typography> */}
         </Grid>
       </Grid>
     )
