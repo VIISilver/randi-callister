@@ -8,6 +8,7 @@ import AboutMeReasons from '../functional/cards/AboutMeReasons.js';
 import MyTeamAbout from '../functional/cards/MyTeamAbout.js';
 import ScrollTop from '../functional/buttons/ScrollTop';
 import Footer from '../functional/footer/Footer';
+import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
   root: {
@@ -42,6 +43,9 @@ class About extends Component {
         <AboutCard />
         <AboutMeText />
         <AboutMeReasons />
+        <Typography gutterBottom gutterTop variant="h6">
+          My Team
+        </Typography>
         <MyTeamAbout />
         <ScrollTop />
         <Footer />

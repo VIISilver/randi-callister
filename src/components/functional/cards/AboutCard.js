@@ -43,6 +43,9 @@ class AboutCard extends Component {
       <Grid container xs={12} className={classes.itemContainer}>
         <Grid item xs={12}>
           <div className={classes.positionSetter}>
+            
+          </div>
+          <div className={classes.positionSetter}>
             <CardMedia
               component="img"
               className={classes.media}
