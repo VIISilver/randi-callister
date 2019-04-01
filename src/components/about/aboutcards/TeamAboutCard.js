@@ -19,8 +19,7 @@ const styles = theme => ({
         color: theme.palette.text.primary,
     },
     avatarContainer: {
-        [theme.breakpoints.down('sm')]:
-        {
+        [theme.breakpoints.down('sm')]: {
             marginLeft: 0,
             marginBottom: theme.spacing.unit * 4
         }
@@ -29,8 +28,7 @@ const styles = theme => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',
-        [theme.breakpoints.down('sm')]:
-        {
+        [theme.breakpoints.down('sm')]: {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center'
@@ -39,8 +37,7 @@ const styles = theme => ({
     baseline: {
         alignSelf: 'baseline',
         marginLeft: theme.spacing.unit * 4,
-        [theme.breakpoints.down('sm')]:
-        {
+        [theme.breakpoints.down('sm')]: {
             display: 'flex',
             flexDirection: 'column',
             textAlign: 'center',
@@ -54,8 +51,7 @@ const styles = theme => ({
     inline: {
         display: 'inline-block',
         marginLeft: theme.spacing.unit * 4,
-        [theme.breakpoints.down('sm')]:
-        {
+        [theme.breakpoints.down('sm')]: {
             marginLeft: 0
         }
     },
@@ -64,8 +60,7 @@ const styles = theme => ({
         textAlign: 'right',
         marginLeft: 50,
         alignSelf: 'flex-end',
-        [theme.breakpoints.down('sm')]:
-        {
+        [theme.breakpoints.down('sm')]: {
             width: '100%',
             margin: 0,
             textAlign: 'center'
@@ -75,7 +70,7 @@ const styles = theme => ({
 })
 
 
-class AboutCard extends Component {
+class TeamAboutCard extends Component {
 
     render() {
         const { classes } = this.props;
@@ -108,5 +103,4 @@ class AboutCard extends Component {
     }
 }
 
-export
-    default withStyles(styles)(AboutCard);
+export default withStyles(styles)(TeamAboutCard);

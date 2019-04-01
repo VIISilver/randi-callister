@@ -5,13 +5,11 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import AboutCard from '../functional/cards/AboutCard.js';
 import AboutMeText from '../functional/cards/AboutMeText.js';
 import AboutMeReasons from '../functional/cards/AboutMeReasons.js';
-import MyTeamAbout from '../functional/cards/MyTeamAbout.js';
 import ScrollTop from '../functional/buttons/ScrollTop';
 import Footer from '../functional/footer/Footer';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-
-
+import Typography from '@material-ui/core/Typography';
+import TeamAboutCard from './aboutcards/TeamAboutCard';
 
 const styles = theme => ({
 
@@ -22,7 +20,7 @@ const styles = theme => ({
         backgroundSize: 'cover',
         backgroundPosition: '0 400px',
         padding: 20,
-        paddingBottom: 50
+        paddingBottom: 60
       },
       grid: {
         width: 1000
@@ -36,6 +34,21 @@ const styles = theme => ({
 
 
 class About extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: 'Joe',
+      description: 'Veniam id pariatur do sint Lorem.',
+      name1: 'Jane',
+      description1: 'Laborum quis excepteur id cillum laboris officia duis.',
+      name2: 'Mav',
+      description2: 'Ut est qui occaecat ea nulla ut.',
+      name3: 'Fido',
+      description3: 'Pariatur non qui labore mollit eu consequat.'
+    }
+  }
 
   render() {
 
@@ -57,7 +70,25 @@ class About extends Component {
               className={classes.grid}>
               <AboutMeText />
               <AboutMeReasons />
-              <MyTeamAbout />
+        {/* <Typography variant="h6">
+          GET TO KNOW THE TEAM
+        </Typography> */}
+        <TeamAboutCard
+          teamMemberName={this.state.name}
+          teamMemberDescription={this.state.description}
+        />
+        <TeamAboutCard
+          teamMemberName={this.state.name1}
+          teamMemberDescription={this.state.description1}
+        />
+        <TeamAboutCard
+          teamMemberName={this.state.name2}
+          teamMemberDescription={this.state.description2}
+        />
+        <TeamAboutCard
+          teamMemberName={this.state.name3}
+          teamMemberDescription={this.state.description3}
+        />
               <ScrollTop />
             </Grid>
           </Grid>

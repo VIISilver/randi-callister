@@ -60,7 +60,7 @@ class AboutMeReasons extends Component {
                                 My Story
                             </Typography>
                             <Typography variant="body2" className={classes.imageText}>
-                                Tempor duis id laboris Lorem adipisicing ad sunt reprehenderit. Aute enim laboris eiusmod velit. Voluptate commodo quis Lorem id est ea deserunt eu commodo elit commodo ipsum. Ipsum laborum nisi dolor est amet reprehenderit veniam consectetur consectetur irure deserunt.
+                                Tempor duis id laboris Lorem adipisicing ad sunt reprehenderit. Aute enim laboris eiusmod velit. Voluptate commodo quis Lorem id est ea deserunt eu commodo elit commodo ipsum.
                             </Typography>
                         </div>
                     </div>

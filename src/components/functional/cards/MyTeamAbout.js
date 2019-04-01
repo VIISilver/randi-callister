@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import AboutCard from '../../about/aboutcards/AboutCard';
-import Grid from '@material-ui/core/Grid';
+import TeamAboutCard from '../../about/aboutcards/TeamAboutCard';
 import Typography from '@material-ui/core/Typography';
 
 
@@ -9,8 +8,6 @@ class MyTeamAbout extends Component {
 
   constructor(props) {
     super(props);
-
-
 
     this.state = {
       name: 'Joe',
@@ -33,19 +30,19 @@ class MyTeamAbout extends Component {
         <Typography variant="h6">
           GET TO KNOW THE TEAM
         </Typography>
-        <AboutCard
+        <TeamAboutCard
           teamMemberName={this.state.name}
           teamMemberDescription={this.state.description}
         />
-        <AboutCard
+        <TeamAboutCard
           teamMemberName={this.state.name1}
           teamMemberDescription={this.state.description1}
         />
-        <AboutCard
+        <TeamAboutCard
           teamMemberName={this.state.name2}
           teamMemberDescription={this.state.description2}
         />
-        <AboutCard
+        <TeamAboutCard
           teamMemberName={this.state.name3}
           teamMemberDescription={this.state.description3}
         />

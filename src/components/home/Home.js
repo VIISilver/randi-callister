@@ -8,7 +8,6 @@ import SectionHeader from '../functional/typo/SectionHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import ScrollTop from '../functional/buttons/ScrollTop';
 import Footer from '../functional/footer/Footer';
-import './Home.css';
 
 const topImage = require('../../assets/image2.jpg');
 
@@ -20,7 +19,7 @@ const styles = theme => ({
     backgroundSize: 'cover',
     backgroundPosition: '0 400px',
     padding: 20,
-    paddingBottom: 200
+    paddingBottom: 60
   },
   grid: {
     width: 1000
