@@ -13,24 +13,24 @@ import TeamAboutCard from './aboutcards/TeamAboutCard';
 
 const styles = theme => ({
 
-      root: { 
-        flexGrow: 1,
-        backgroundColor: theme.palette.grey['A500'],
-        overflow: 'hidden',
-        backgroundSize: 'cover',
-        backgroundPosition: '0 400px',
-        padding: 20,
-        paddingBottom: 60
-      },
-      grid: {
-        width: 1000
-      },
-      media: {
-        // ⚠️ object-fit is not supported by IE 11.
-        objectFit: 'cover',
-        height: "95vh"
-      }
-    })
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.grey['A500'],
+    overflow: 'hidden',
+    backgroundSize: 'cover',
+    backgroundPosition: '0 400px',
+    padding: 20,
+    paddingBottom: 60
+  },
+  grid: {
+    width: 1000
+  },
+  media: {
+    // ⚠️ object-fit is not supported by IE 11.
+    objectFit: 'cover',
+    height: "95vh"
+  }
+})
 
 
 class About extends Component {
@@ -67,28 +67,31 @@ class About extends Component {
               alignItems="center"
               justify="center"
               container
-              className={classes.grid}>
+              className={classes.grid}
+            >
               <AboutMeText />
               <AboutMeReasons />
-        {/* <Typography variant="h6">
-          GET TO KNOW THE TEAM
-        </Typography> */}
-        <TeamAboutCard
-          teamMemberName={this.state.name}
-          teamMemberDescription={this.state.description}
-        />
-        <TeamAboutCard
-          teamMemberName={this.state.name1}
-          teamMemberDescription={this.state.description1}
-        />
-        <TeamAboutCard
-          teamMemberName={this.state.name2}
-          teamMemberDescription={this.state.description2}
-        />
-        <TeamAboutCard
-          teamMemberName={this.state.name3}
-          teamMemberDescription={this.state.description3}
-        />
+              <Grid item xs={12}>
+                <Typography variant="h6">
+                  GET TO KNOW THE TEAM
+                </Typography>
+              </Grid>
+              <TeamAboutCard
+                teamMemberName={this.state.name}
+                teamMemberDescription={this.state.description}
+              />
+              <TeamAboutCard
+                teamMemberName={this.state.name1}
+                teamMemberDescription={this.state.description1}
+              />
+              <TeamAboutCard
+                teamMemberName={this.state.name2}
+                teamMemberDescription={this.state.description2}
+              />
+              <TeamAboutCard
+                teamMemberName={this.state.name3}
+                teamMemberDescription={this.state.description3}
+              />
               <ScrollTop />
             </Grid>
           </Grid>

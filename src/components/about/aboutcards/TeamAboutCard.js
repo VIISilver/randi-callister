@@ -55,17 +55,17 @@ const styles = theme => ({
             marginLeft: 0
         }
     },
-    inlineRight: {
-        width: '30%',
-        textAlign: 'right',
-        marginLeft: 50,
-        alignSelf: 'flex-end',
-        [theme.breakpoints.down('sm')]: {
-            width: '100%',
-            margin: 0,
-            textAlign: 'center'
-        }
-    },
+    // inlineRight: {
+    //     width: '30%',
+    //     textAlign: 'right',
+    //     marginLeft: 50,
+    //     alignSelf: 'flex-end',
+    //     [theme.breakpoints.down('sm')]: {
+    //         width: '100%',
+    //         margin: 0,
+    //         textAlign: 'center'
+    //     }
+    // },
 
 })
 
