@@ -11,6 +11,11 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TeamAboutCard from './aboutcards/TeamAboutCard';
 
+const firstImage = require('../../assets/image8.jpg');
+const secondImage = require('../../assets/image12.jpg');
+const thirdImage = require('../../assets/image9.jpg');
+const fourthImage = require('../../assets/image14.jpg');
+
 const styles = theme => ({
 
   root: {
@@ -41,12 +46,16 @@ class About extends Component {
     this.state = {
       name: 'Joe',
       description: 'Veniam id pariatur do sint Lorem.',
+      image: firstImage,
       name1: 'Jane',
-      description1: 'Laborum quis excepteur id cillum laboris officia duis.',
+      description1: 'Laborum quis excepteur id cillum laboris.',
+      image1: secondImage,
       name2: 'Mav',
       description2: 'Ut est qui occaecat ea nulla ut.',
+      image2: thirdImage,
       name3: 'Fido',
-      description3: 'Pariatur non qui labore mollit eu consequat.'
+      description3: 'Pariatur non qui labore mollit eu consequat.',
+      image3: fourthImage
     }
   }
 
@@ -79,18 +88,22 @@ class About extends Component {
               <TeamAboutCard
                 teamMemberName={this.state.name}
                 teamMemberDescription={this.state.description}
+                teamMemberImage={this.state.image}
               />
               <TeamAboutCard
                 teamMemberName={this.state.name1}
                 teamMemberDescription={this.state.description1}
+                teamMemberImage={this.state.image1}
               />
               <TeamAboutCard
                 teamMemberName={this.state.name2}
                 teamMemberDescription={this.state.description2}
+                teamMemberImage={this.state.image2}
               />
               <TeamAboutCard
                 teamMemberName={this.state.name3}
                 teamMemberDescription={this.state.description3}
+                teamMemberImage={this.state.image3}
               />
               <ScrollTop />
             </Grid>
