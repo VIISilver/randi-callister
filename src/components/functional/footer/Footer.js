@@ -49,7 +49,7 @@ class Footer extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Grid container xs={12} className={classes.root}>
+      <Grid container className={classes.root}>
         <Grid container className={classes.grid}>
           <Grid item xs={9} className={classes.footerText}>
             <Typography color="inherit">
@@ -58,9 +58,9 @@ class Footer extends React.Component {
             </Typography>
           </Grid>
           <Grid item xs={2} className={classes.socialBar}>
-            <a href="https://facebook.com" target="_blank"><img className={classes.socialImages} src={facebook} /></a>
-            <a href="https://twitter.com" target="_blank"><img className={classes.socialImages} src={twitter} /></a>
-            <a href="https://instagram.com" target="_blank"><img className={classes.socialImages} src={instagram} /></a>
+            <a href="https://facebook.com"target="_blank" rel="noopener noreferrer"><img className={classes.socialImages} src={facebook} /></a>
+            <a href="https://twitter.com"target="_blank" rel="noopener noreferrer"><img className={classes.socialImages} src={twitter} /></a>
+            <a href="https://instagram.com"target="_blank" rel="noopener noreferrer"><img className={classes.socialImages} src={instagram} /></a>
           </Grid>
         </Grid>
       </Grid>

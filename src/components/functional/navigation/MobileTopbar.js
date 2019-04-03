@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Link, withRouter } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
@@ -30,6 +30,7 @@ const styles = theme => ({
   },
   flex: {
     display: 'flex',
+    alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -116,7 +117,7 @@ class MobileTopbar extends Component {
       <AppBar position="absolute" color="default" className={classes.appBar}>
         <Toolbar>
             <Grid container spacing={24} alignItems="baseline">
-              <Grid item xs={12} alignItems='baseline' className={classes.flex}>
+              <Grid item xs={12} className={classes.flex}>
                   { !this.props.noTabs && (
                     <React.Fragment>
                     <div className={classes.iconContainer}>

@@ -3,11 +3,9 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Avatar from '@material-ui/core/Avatar';
-import FlashOn from '@material-ui/icons/FlashOn';
 import ButtonBar from '../buttons/ButtonBar';
 import Grid from '@material-ui/core/Grid';
-
-// const fire = require('../../../assets/fire.svg');
+import Icon from '../../../assets/Icon';
 
 const styles = theme => ({
   paper: {
@@ -80,29 +78,31 @@ class CardItem extends Component {
 
     return (
       <Grid item xs={12} sm={6}>
-      <div className={classes.root}>
-        <Paper className={classes.paper}>
-          <div className={classes.itemContainer}>
-            <div className={classes.avatarContainer}>
-              <Avatar className={classes.avatar}>
-                <FlashOn />
-                {/* fire */}
-              </Avatar>
-            </div>
-            <div className={classes.baseline}>
-              <div className={classes.inlineRight}>
-                <Typography variant="h4" gutterBottom>
-                  Training Programs
+        <div className={classes.root}>
+          <Paper className={classes.paper}>
+            <div className={classes.itemContainer}>
+              <div className={classes.avatarContainer}>
+                <Avatar className={classes.avatar}>
+                  {/* <Icon name="wifi" fill="#3f51b5"/> */}
+                  <Icon 
+                  name={this.props.homePageIcon} 
+                  fill={this.props.homePageIconColor} />
+                </Avatar>
+              </div>
+              <div className={classes.baseline}>
+                <div className={classes.inlineRight}>
+                  <Typography variant="h4" gutterBottom>
+                    {this.props.homePageCardTitle}
               </Typography>
-                <Typography style={{ textTransform: 'uppercase' }} color='secondary' gutterBottom>
-                  6-week fat loss and conditioning program available
+                  <Typography style={{ textTransform: 'uppercase' }} color='secondary' gutterBottom>
+                    {this.props.homePageCardText}
               </Typography>
-                <ButtonBar />
+                  <ButtonBar />
+                </div>
               </div>
             </div>
-          </div>
-        </Paper>
-      </div>
+          </Paper>
+        </div>
       </Grid>
     )
   }
