@@ -20,7 +20,7 @@ const styles = theme => ({
 
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.grey['A500'],
+    backgroundColor: 'white',
     overflow: 'hidden',
     backgroundSize: 'cover',
     backgroundPosition: '0 400px',

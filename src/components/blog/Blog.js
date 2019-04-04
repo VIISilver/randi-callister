@@ -13,7 +13,7 @@ const backgroundShape = require('../../assets/shape.svg');
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.grey['A500'],
+    backgroundColor: 'white',
     overflow: 'hidden',
     background: `url(${backgroundShape}) no-repeat`,
     backgroundSize: 'cover',
@@ -50,16 +50,12 @@ class Blog extends Component {
           <Grid container justify="center">
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
               <Grid item xs={12}>
-                <CardItem />
                 <SectionHeader title="Hey there, I'm Randi" subtitle="Esse aute nisi enim consequat dolor laboris do do id." />
                 <CardMedia
                   component="img"
                   className={classes.media}
                   image={topImage}
                 />
-                <CardItem />
-                <CardItem />
-                <CardItem />
               </Grid>
             </Grid>
           </Grid>

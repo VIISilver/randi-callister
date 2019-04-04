@@ -15,7 +15,7 @@ const aboutImage = require('../../assets/image14.jpg');
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.grey['A500'],
+    backgroundColor: 'white',
     overflow: 'hidden',
     backgroundSize: 'cover',
     backgroundPosition: '0 400px',
@@ -40,9 +40,15 @@ class Home extends Component {
     this.state = {
       iconFillColor: '#3F51B5',
 
+      homeToAboutButtonText: 'Read More',
+      homeToShopButtonText: 'Go To Shop',
+
+      homeToAboutLinkToString: '/about',
+      homeToShopLinkToString: '/shop',
+
       aboutIcon: { name: 'wifi' },
       aboutCardTitle: 'About Me',
-      aboutCardText: 'Et est tempor sunt deserunt mollit nostrud tempor in.',
+      aboutCardText: 'Learn about what it is that got me into fitness as well as my crazy team I work with every day!',
 
       shopItemIcon: { name: 'phone' },
       shopItemTitle: 'Burn it Babe',
@@ -84,6 +90,8 @@ class Home extends Component {
                 homePageIconColor={this.state.iconFillColor}
                 homePageCardTitle={this.state.aboutCardTitle}
                 homePageCardText={this.state.aboutCardText}
+                homeButtonText={this.state.homeToAboutButtonText}
+                homeToPageLinkToString={this.state.homeToAboutLinkToString}
               />
               <Grid item xs={12} sm={6}>
                 <SectionHeader title="Hey there, I'm Randi" subtitle="Esse aute nisi enim consequat dolor laboris do do id." />
@@ -99,24 +107,32 @@ class Home extends Component {
                 homePageIconColor={this.state.iconFillColor}
                 homePageCardTitle={this.state.shopItemTitle}
                 homePageCardText={this.state.shopItemText}
+                homeButtonText={this.state.homeToShopButtonText}
+                homeToPageLinkToString={this.state.homeToShopLinkToString}
               />
               <CardItem
                 homePageIcon={this.state.shopItemIcon1.name}
                 homePageIconColor={this.state.iconFillColor}
                 homePageCardTitle={this.state.shopItemTitle1}
                 homePageCardText={this.state.shopItemText1}
+                homeButtonText={this.state.homeToShopButtonText}
+                homeToPageLinkToString={this.state.homeToShopLinkToString}
               />
               <CardItem
                 homePageIcon={this.state.shopItemIcon2.name}
                 homePageIconColor={this.state.iconFillColor}
                 homePageCardTitle={this.state.shopItemTitle2}
                 homePageCardText={this.state.shopItemText2}
+                homeButtonText={this.state.homeToShopButtonText}
+                homeToPageLinkToString={this.state.homeToShopLinkToString}
               />
               <CardItem
                 homePageIcon={this.state.shopItemIcon3.name}
                 homePageIconColor={this.state.iconFillColor}
                 homePageCardTitle={this.state.shopItemTitle3}
                 homePageCardText={this.state.shopItemText3}
+                homeButtonText={this.state.homeToShopButtonText}
+                homeToPageLinkToString={this.state.homeToShopLinkToString}
               />
             </Grid>
           </Grid>

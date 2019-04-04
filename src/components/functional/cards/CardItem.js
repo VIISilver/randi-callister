@@ -83,7 +83,6 @@ class CardItem extends Component {
             <div className={classes.itemContainer}>
               <div className={classes.avatarContainer}>
                 <Avatar className={classes.avatar}>
-                  {/* <Icon name="wifi" fill="#3f51b5"/> */}
                   <Icon 
                   name={this.props.homePageIcon} 
                   fill={this.props.homePageIconColor} />
@@ -97,7 +96,7 @@ class CardItem extends Component {
                   <Typography style={{ textTransform: 'uppercase' }} color='secondary' gutterBottom>
                     {this.props.homePageCardText}
               </Typography>
-                  <ButtonBar />
+                  <ButtonBar pageToPageLinkToString={this.props.homeToPageLinkToString} pageButtonText={this.props.homeButtonText} />
                 </div>
               </div>
             </div>
