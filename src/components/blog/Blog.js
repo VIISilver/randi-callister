@@ -1,37 +1,58 @@
 import React, { Component } from 'react';
 import MobileTopbar from '../functional/navigation/MobileTopbar';
+import Footer from '../functional/footer/Footer';
+import ScrollTop from '../functional/buttons/ScrollTop';
 import withStyles from '@material-ui/core/styles/withStyles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import CardItem from '../functional/cards/CardItem';
-import SectionHeader from '../functional/typo/SectionHeader';
-import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
+import BlogEntryCard from './blogComponents/BlogEntryCard';
 
-const topImage = require('../../assets/image4.jpg');
-const backgroundShape = require('../../assets/shape.svg');
+const burnItImage = require('../../assets/image13.jpg');
+
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
     backgroundColor: 'white',
     overflow: 'hidden',
-    background: `url(${backgroundShape}) no-repeat`,
+    // background: `url(${backgroundShape}) no-repeat`,
     backgroundSize: 'cover',
     backgroundPosition: '0 400px',
     padding: 20,
-    paddingBottom: 200
+    paddingBottom: 72,
+    paddingTop: 40,
   },
   grid: {
     width: 1000
   },
-  media: {
-    // ⚠️ object-fit is not supported by IE 11.
-    objectFit: 'cover',
-    height: 1000
+  blogTopHeader: {
+    backgroundColor: '#b2b9e1',
+    width: '100%',
+    textAlign: 'center',
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
+  blogTopHeaderText: {
+    color: 'white',
+  },
+  subHeadBreak: {
+    margin: 10,
+    borderColor: '#74215a',
+    width: '87%',
+    display: 'block',
   }
 })
 
 class Blog extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      blogPostCardImage1: burnItImage,
+    }
+  }
 
   render() {
     const { classes } = this.props;
@@ -41,25 +62,23 @@ class Blog extends Component {
       <React.Fragment>
         <CssBaseline />
         <MobileTopbar currentPath={currentPath} />
-                <CardMedia
-                  component="img"
-                  className={classes.media}
-                  image={topImage}
-                />
+        <div className={classes.blogTopHeader}>
+          <Typography variant="h2" className={classes.blogTopHeaderText}>
+            Blog
+          </Typography>
+        </div>
         <div className={classes.root}>
           <Grid container justify="center">
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
-              <Grid item xs={12}>
-                <SectionHeader title="Hey there, I'm Randi" subtitle="Esse aute nisi enim consequat dolor laboris do do id." />
-                <CardMedia
-                  component="img"
-                  className={classes.media}
-                  image={topImage}
-                />
-              </Grid>
+              <BlogEntryCard
+              pagePostImage={this.state.blogPostCardImage1}
+                
+              />
+              <ScrollTop />
             </Grid>
           </Grid>
         </div>
+        <Footer />
       </React.Fragment>
     )
   }

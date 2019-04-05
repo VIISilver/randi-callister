@@ -14,11 +14,13 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
+const burnItImage = require('../../../assets/image13.jpg');
+
 
 const styles = theme => ({
   card: {
     maxWidth: 400,
-    marginTop: 75,
+    marginTop: 35,
   },
   media: {
     height: 375,
@@ -34,12 +36,16 @@ const styles = theme => ({
       duration: theme.transitions.duration.shortest,
     }),
   },
-  expandOpen: {
+  closeExpand: {
     transform: 'rotate(180deg)',
+    display: 'block',
+  },
+  expandOpen: {
+    display: 'none',
   },
 });
 
-class ShopItemCard extends React.Component {
+class BlogEntryCard extends React.Component {
   state = { expanded: false };
 
   handleExpandClick = () => {
@@ -51,25 +57,37 @@ class ShopItemCard extends React.Component {
 
     return (
       <Card className={classes.card}>
-        <CardHeader
-          title={this.props.pageCardHeaderTitle}
-        />
         <CardMedia
           className={classes.media}
-          image={this.props.pageCardImage}
+          image={this.props.pagePostImage}
+        //   image={burnItImage}
           title="Paella dish"
+        />
+        <CardHeader
+        //   title={this.props.pageCardHeaderTitle}
+          title="Blog Post"
         />
         <CardContent>
           <Typography component="p">
-            {this.props.pageVisibleSubText}
+            {/* {this.props.pageVisibleSubText} */}
+            Pariatur nostrud sunt nulla fugiat aliquip Lorem.
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton aria-label="Add to favorites">
-            <FavoriteIcon />
-          </IconButton>
           <IconButton aria-label="Share">
             <ShareIcon />
+          </IconButton>
+          <IconButton
+            className={classnames(
+                // classes.expandOpen, 
+                {[classes.expandOpen]: !this.state.expanded},
+                {[classes.closeExpand]: this.state.expanded}
+                )}
+            onClick={this.handleExpandClick}
+            aria-expanded={this.state.expanded}
+            aria-label="Show more"
+          >
+            <ExpandMoreIcon />
           </IconButton>
           <IconButton
             className={classnames(classes.expand, {
@@ -79,20 +97,25 @@ class ShopItemCard extends React.Component {
             aria-expanded={this.state.expanded}
             aria-label="Show more"
           >
-            <ExpandMoreIcon />
+          <Typography component="p">
+          Read more...
+          </Typography>
           </IconButton>
         </CardActions>
         <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography paragraph>{this.props.pageNonVisible1}</Typography>
-            <Typography paragraph>             
-            {this.props.pageNonVisible2}
+            {/* <Typography paragraph>{this.props.pageNonVisible1}</Typography> */}
+            <Typography paragraph>
+              Sint ad aliquip non magna voluptate amet deserunt in elit.
+            {/* {this.props.pageNonVisible2} */}
             </Typography>
             <Typography paragraph>
-            {this.props.pageNonVisible3}
+              Esse elit commodo labore est ea. Et tempor laboris tempor irure eiusmod labore. Ut officia laboris in ex laborum cupidatat culpa. Incididunt enim reprehenderit est Lorem magna ut incididunt occaecat proident sit voluptate. Proident est Lorem cupidatat eiusmod.
+            {/* {this.props.pageNonVisible3} */}
             </Typography>
             <Typography paragraph>
-            {this.props.pageNonVisible4}
+              Veniam cupidatat adipisicing excepteur ipsum in aliqua qui pariatur veniam culpa ea.
+            {/* {this.props.pageNonVisible4} */}
             </Typography>
           </CardContent>
         </Collapse>
@@ -101,8 +124,8 @@ class ShopItemCard extends React.Component {
   }
 }
 
-ShopItemCard.propTypes = {
+BlogEntryCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ShopItemCard);
+export default withStyles(styles)(BlogEntryCard);

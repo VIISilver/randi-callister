@@ -40,6 +40,8 @@ const styles = theme => ({
   subHeadBreak: {
     margin: 10,
     borderColor: '#74215a',
+    width: '87%',
+    display: 'block',
   }
 })
 
@@ -89,13 +91,13 @@ class Shop extends Component {
           </Typography>
         </div>
         <div className={classes.root}>
+          <Grid container justify="center">
+            <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
           <hr className={classes.subHeadBreak} />
           <Typography variant="h3">
             Programs
           </Typography>
           <hr className={classes.subHeadBreak} />
-          <Grid container justify="center">
-            <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
               <ShopItemCard
                 pageCardHeaderTitle={this.state.shopCardWomanTitle}
                 pageCardImage={this.state.shopCardWomanImage}
@@ -123,6 +125,11 @@ class Shop extends Component {
                 pageNonVisible3={this.state.shopNutrientNonVisibleSubText3}
                 pageNonVisible4={this.state.shopNutrientNonVisibleSubText4}
               />
+              <hr className={classes.subHeadBreak} />
+              <Typography variant="h3">
+                Challenges
+              </Typography>
+              <hr className={classes.subHeadBreak} />
               <ScrollTop />
             </Grid>
           </Grid>
