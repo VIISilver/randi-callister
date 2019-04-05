@@ -51,6 +51,9 @@ class Blog extends Component {
 
     this.state = {
       blogPostCardImage1: burnItImage,
+      blogPostCardTitle: 'Blog Post 1',
+      blogVisibleSubText: 'Magna aliqua nulla officia consectetur anim ex.',
+      blogLongDate: 'March 29, 2019',
     }
   }
 
@@ -71,8 +74,11 @@ class Blog extends Component {
           <Grid container justify="center">
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
               <BlogEntryCard
-              pagePostImage={this.state.blogPostCardImage1}
-                
+              pageCardImage={this.state.blogPostCardImage1}
+              pageCardHeaderTitle={this.state.blogPostCardTitle}
+              pageVisibleSubText={this.state.blogVisibleSubText}
+              pageLongDate={this.state.blogLongDate}
+
               />
               <ScrollTop />
             </Grid>

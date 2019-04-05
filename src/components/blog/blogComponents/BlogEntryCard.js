@@ -39,6 +39,7 @@ const styles = theme => ({
   closeExpand: {
     transform: 'rotate(180deg)',
     display: 'block',
+    marginLeft: 'auto',
   },
   expandOpen: {
     display: 'none',
@@ -59,27 +60,22 @@ class BlogEntryCard extends React.Component {
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
-          image={this.props.pagePostImage}
-        //   image={burnItImage}
-          title="Paella dish"
+          image={this.props.pageCardImage}
         />
         <CardHeader
-        //   title={this.props.pageCardHeaderTitle}
-          title="Blog Post"
+          title={this.props.pageCardHeaderTitle}
         />
         <CardContent>
           <Typography component="p">
-            {/* {this.props.pageVisibleSubText} */}
-            Pariatur nostrud sunt nulla fugiat aliquip Lorem.
+            {this.props.pageVisibleSubText}
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton aria-label="Share">
-            <ShareIcon />
-          </IconButton>
+        <Typography component="p">
+          {this.props.pageLongDate}
+          </Typography>
           <IconButton
             className={classnames(
-                // classes.expandOpen, 
                 {[classes.expandOpen]: !this.state.expanded},
                 {[classes.closeExpand]: this.state.expanded}
                 )}
