@@ -27,7 +27,6 @@ class ButtonBar extends Component {
 
     return (
       <div className={classes.spaceTop}>
-        {/* <Link to="/shop" className={classes.link}> */}
         <Link to={this.props.pageToPageLinkToString} className={classes.link}>
           <Button
             variant="contained"

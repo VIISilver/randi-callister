@@ -6,6 +6,9 @@ import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import SectionHeader from '../functional/typo/SectionHeader';
+import Typography from '@material-ui/core/Typography';
+import ButtonBar from '../functional/buttons/ButtonBar';
+import Footer from '../functional/footer/Footer';
 
 const backgroundShape = require('../../assets/shape.svg');
 
@@ -14,11 +17,11 @@ const styles = theme => ({
         flexGrow: 1,
         backgroundColor: 'white',
         overflow: 'hidden',
-        background: `url(${backgroundShape}) no-repeat`,
+        // background: `url(${backgroundShape}) no-repeat`,
         backgroundSize: 'cover',
         backgroundPosition: '0 400px',
         padding: 20,
-        paddingBottom: 200
+        // paddingBottom: 60
     },
     grid: {
         width: 1000
@@ -36,7 +39,7 @@ const styles = theme => ({
     },
     menu: {
         width: 200,
-    }
+    },
 })
 
 const currencies = [
@@ -55,11 +58,18 @@ const currencies = [
 ];
 
 class Contact extends Component {
-    state = {
-        name: 'Cat in the Hat',
-        age: '',
-        multiline: 'Controlled'
-    };
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            name: 'Cat in the Hat',
+            age: '',
+            multiline: 'Controlled',
+            contactButtonText: 'Send Message',
+            contactToHomeLinkToString: '/'
+        }
+    }
 
     handleChange = name => event => {
         this.setState({
@@ -81,13 +91,13 @@ class Contact extends Component {
                     <Grid container justify="center">
                         <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
                             <Grid item xs={12} sm={6}>
-                                <SectionHeader title="Get in Touch with Me" />
-                                <SectionHeader subtitle="Please note that I am very busy and will do everything in my power to respond" />
+                                <Typography variant='h5'>Get in Touch with Me</Typography>
+                                <hr />
+                                <Typography variant='body2'>Please note that I am very busy and will do everything in my power to respond</Typography>
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <form className={classes.container} noValidate autoComplete="off">
-                                    <h1>Send Message</h1>
-
+                                    {/* <Typography variant='h6'>Send Message</Typography> */}
                                     <TextField
                                         id="outlined-name"
                                         label="Name"
@@ -148,10 +158,15 @@ class Contact extends Component {
                                     />
 
                                 </form>
+                                <ButtonBar
+                                    pageToPageLinkToString={this.state.contactToHomeLinkToString}
+                                    pageButtonText={this.state.contactButtonText}
+                                />
                             </Grid>
                         </Grid>
                     </Grid>
                 </div>
+                <Footer />
             </React.Fragment>
         )
     }

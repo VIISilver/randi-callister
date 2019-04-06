@@ -125,11 +125,11 @@ class Shop extends Component {
                 pageNonVisible3={this.state.shopNutrientNonVisibleSubText3}
                 pageNonVisible4={this.state.shopNutrientNonVisibleSubText4}
               />
-              <hr className={classes.subHeadBreak} />
+              {/* <hr className={classes.subHeadBreak} />
               <Typography variant="h3">
                 Challenges
               </Typography>
-              <hr className={classes.subHeadBreak} />
+              <hr className={classes.subHeadBreak} /> */}
               <ScrollTop />
             </Grid>
           </Grid>

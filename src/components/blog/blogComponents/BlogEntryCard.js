@@ -100,18 +100,15 @@ class BlogEntryCard extends React.Component {
         </CardActions>
         <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            {/* <Typography paragraph>{this.props.pageNonVisible1}</Typography> */}
+            <Typography paragraph>{this.props.pageNonVisible1}</Typography>
             <Typography paragraph>
-              Sint ad aliquip non magna voluptate amet deserunt in elit.
-            {/* {this.props.pageNonVisible2} */}
+            {this.props.pageNonVisible2}
             </Typography>
             <Typography paragraph>
-              Esse elit commodo labore est ea. Et tempor laboris tempor irure eiusmod labore. Ut officia laboris in ex laborum cupidatat culpa. Incididunt enim reprehenderit est Lorem magna ut incididunt occaecat proident sit voluptate. Proident est Lorem cupidatat eiusmod.
-            {/* {this.props.pageNonVisible3} */}
+            {this.props.pageNonVisible3}
             </Typography>
             <Typography paragraph>
-              Veniam cupidatat adipisicing excepteur ipsum in aliqua qui pariatur veniam culpa ea.
-            {/* {this.props.pageNonVisible4} */}
+            {this.props.pageNonVisible4}
             </Typography>
           </CardContent>
         </Collapse>
