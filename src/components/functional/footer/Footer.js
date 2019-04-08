@@ -1,9 +1,9 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import classnames from 'classnames';
 
 const logo = require('../../../assets/exercise.png');
 const facebook = require('../../../assets/social-facebook-box-blue-icon.png');
@@ -40,19 +40,37 @@ const styles = theme => ({
   },
   footerText: {
     marginLeft: 13,
+  },
+  customFooterSize: {
+    fontSize: 14,
+  },
+  fixedIfShorterThanWindow: {
+    position: 'fixed',
+    bottom: 0,
   }
 })
 
 class Footer extends React.Component {
 
+  componentDidMount() {
+    console.log(this.props.bottomNavFixed)
+  }
+
   render() {
     const { classes } = this.props;
 
     return (
-      <Grid container className={classes.root}>
+      // <Grid container 
+      // className={classnames(classes.root, {
+      //   [classes.fixedIfShorterThanWindow]: this.props.bottomNavFixed,
+      // })}
+      // >
+      <Grid container 
+      className={classnames(classes.root, classes.fixedIfShorterThanWindow)}
+      >
         <Grid container className={classes.grid}>
           <Grid item xs={9} className={classes.footerText}>
-            <Typography color="inherit">
+            <Typography color="inherit" className={classes.customFooterSize}>
               <img width={24} src={logo} />
               <span className={classes.tagline}>Developed by Strength LLC</span>
             </Typography>
