@@ -52,8 +52,16 @@ const styles = theme => ({
 
 class Footer extends React.Component {
 
+  constructor(props) {
+      super(props);
+
+      this.state = {
+          ifShorterThan: 12
+      }
+  }
+
   componentDidMount() {
-    console.log(this.props.bottomNavFixed)
+    console.log(this.state.ifShorterThan)
   }
 
   render() {
