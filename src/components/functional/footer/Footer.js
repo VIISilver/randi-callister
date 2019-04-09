@@ -52,29 +52,14 @@ const styles = theme => ({
 
 class Footer extends React.Component {
 
-  constructor(props) {
-      super(props);
-
-      this.state = {
-          ifShorterThan: 12
-      }
-  }
-
-  componentDidMount() {
-    console.log(this.state.ifShorterThan)
-  }
-
   render() {
     const { classes } = this.props;
 
     return (
-      // <Grid container 
-      // className={classnames(classes.root, {
-      //   [classes.fixedIfShorterThanWindow]: this.props.bottomNavFixed,
-      // })}
-      // >
       <Grid container 
-      className={classnames(classes.root, classes.fixedIfShorterThanWindow)}
+      className={classnames(classes.root, {
+        [classes.fixedIfShorterThanWindow]: this.props.bottomNavFixedIfShorter,
+      })}
       >
         <Grid container className={classes.grid}>
           <Grid item xs={9} className={classes.footerText}>

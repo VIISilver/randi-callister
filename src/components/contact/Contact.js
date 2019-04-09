@@ -65,29 +65,27 @@ class Contact extends Component {
             multiline: 'Controlled',
             contactButtonText: 'Send Message',
             contactToHomeLinkToString: '/',
-            bottomNavFixed: true
+            contactHeight: 0,
+            contactWindowHeight: 0,
+            bottomNavFixed: false
         }
     }
 
     componentDidMount() {
         const contactHeight = this.contactClass.clientHeight;
         const contactWindowHeight = window.innerHeight;
-        this.setState({ contactHeight, contactWindowHeight });
-
         if (contactHeight < contactWindowHeight) {
             this.setState({
-                [this.state.bottomNavFixed]: true,
+                bottomNavFixed: true,
             });
-        };
-
-        console.log(contactHeight, contactWindowHeight, this.state.bottomNavFixed);
+        }
     }
 
     handleChange = name => event => {
         this.setState({
             [name]: event.target.value,
         });
-    };
+    }
 
 
 
@@ -178,7 +176,7 @@ class Contact extends Component {
                             </Grid>
                         </Grid>
                     </div>
-                    <Footer />
+                    <Footer bottomNavFixedIfShorter={this.state.bottomNavFixed} />
                 </div>
             </React.Fragment>
         )
