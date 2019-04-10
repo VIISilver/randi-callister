@@ -114,7 +114,7 @@ class MobileTopbar extends Component {
     const { classes } = this.props;
     
     return (
-      <AppBar position="absolute" color="default" className={classes.appBar}>
+      <AppBar children position="absolute" color="default" className={classes.appBar}>
         <Toolbar>
             <Grid container spacing={24} alignItems="baseline">
               <Grid item xs={12} className={classes.flex}>
@@ -128,17 +128,17 @@ class MobileTopbar extends Component {
                   <div className={classes.inline}>
                     <Typography variant="h6" color="inherit" noWrap>
                       <Link to='/' className={classes.link}>
-                        <img width={24} src={logo} />
+                        <img width={24} src={logo} alt="Randi Callister Running Woman Logo" />
                         <span className={classes.tagline}>Randi Callister</span>
                       </Link>
                     </Typography>
                   </div>
                       <div className={classes.tabContainer}>
-                        <SwipeableDrawer anchor="left" open={this.state.menuDrawer} onClose={this.mobileMenuClose} >
+                        <SwipeableDrawer anchor="left" open={this.state.menuDrawer} onOpen={this.mobileMenuOpen} onClose={this.mobileMenuClose} >
                           <AppBar title="Menu" />
                           <List>
                             {Menu.map((item, index) => (
-                              <ListItem component={Link} to={{pathname: item.pathname, search: this.props.location.search}} button key={item.index}>
+                              <ListItem component={Link} to={{pathname: item.pathname, search: this.props.location.search}} button key={index}>
                                 <ListItemText primary={item.label} />
                               </ListItem>
                             ))}

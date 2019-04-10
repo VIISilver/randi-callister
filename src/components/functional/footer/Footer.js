@@ -64,14 +64,14 @@ class Footer extends React.Component {
         <Grid container className={classes.grid}>
           <Grid item xs={9} className={classes.footerText}>
             <Typography color="inherit" className={classes.customFooterSize}>
-              <img width={24} src={logo} />
+              <img width={24} src={logo} alt="Randi Callister Running Woman Logo" />
               <span className={classes.tagline}>Developed by Strength LLC</span>
             </Typography>
           </Grid>
           <Grid item xs={2} className={classes.socialBar}>
-            <a href="https://facebook.com"target="_blank" rel="noopener noreferrer"><img className={classes.socialImages} src={facebook} /></a>
-            <a href="https://twitter.com"target="_blank" rel="noopener noreferrer"><img className={classes.socialImages} src={twitter} /></a>
-            <a href="https://instagram.com"target="_blank" rel="noopener noreferrer"><img className={classes.socialImages} src={instagram} /></a>
+            <a href="https://facebook.com"target="_blank" rel="noopener noreferrer"><img className={classes.socialImages} src={facebook} alt="Blue and White Facebook Logo" /></a>
+            <a href="https://twitter.com"target="_blank" rel="noopener noreferrer"><img className={classes.socialImages} src={twitter} alt="Twitter Logo" /></a>
+            <a href="https://instagram.com"target="_blank" rel="noopener noreferrer"><img className={classes.socialImages} src={instagram} alt="Instagram Logo" /></a>
           </Grid>
         </Grid>
       </Grid>

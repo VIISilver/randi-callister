@@ -8,6 +8,8 @@ import SectionHeader from '../functional/typo/SectionHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import ScrollTop from '../functional/buttons/ScrollTop';
 import Footer from '../functional/footer/Footer';
+import CardHeader from '@material-ui/core/CardHeader';
+import Typography from '@material-ui/core/Typography';
 
 const topImage = require('../../assets/image2.jpg');
 const aboutImage = require('../../assets/image14.jpg');
@@ -28,7 +30,9 @@ const styles = theme => ({
   media: {
     // ⚠️ object-fit is not supported by IE 11.
     objectFit: 'cover',
-    height: "95vh"
+    height: "57vh",
+    background: `url(${topImage}) no-repeat`,
+    backgroundSize: 'cover',
   }
 })
 
@@ -77,6 +81,12 @@ class Home extends Component {
       <React.Fragment>
         <CssBaseline />
         <MobileTopbar currentPath={currentPath} />
+        <CardHeader className={classes.media}
+          title={
+          <Typography variant="h5">
+          Don't know how to reach your fitness goal?</Typography>
+          }
+           />
         <CardMedia
           component="img"
           className={classes.media}
