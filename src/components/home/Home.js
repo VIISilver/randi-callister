@@ -4,17 +4,15 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import CardItem from '../functional/cards/CardItem';
-import SectionHeader from '../functional/typo/SectionHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import ScrollTop from '../functional/buttons/ScrollTop';
 import Footer from '../functional/footer/Footer';
-import CardHeader from '@material-ui/core/CardHeader';
 import Typography from '@material-ui/core/Typography';
+import HomeHeader from './homecards/HomeHeader';
 
-const topImage = require('../../assets/image2.jpg');
 const aboutImage = require('../../assets/image14.jpg');
 
-const styles = theme => ({
+const styles = () => ({
   root: {
     flexGrow: 1,
     backgroundColor: 'white',
@@ -26,13 +24,6 @@ const styles = theme => ({
   },
   grid: {
     width: 1000
-  },
-  media: {
-    // ⚠️ object-fit is not supported by IE 11.
-    objectFit: 'cover',
-    height: "57vh",
-    background: `url(${topImage}) no-repeat`,
-    backgroundSize: 'cover',
   }
 })
 
@@ -50,9 +41,9 @@ class Home extends Component {
       homeToAboutLinkToString: '/about',
       homeToShopLinkToString: '/shop',
 
-      aboutIcon: { name: 'wifi' },
-      aboutCardTitle: 'About Me',
-      aboutCardText: 'Learn about what it is that got me into fitness as well as my crazy team I work with every day!',
+      // aboutIcon: { name: 'wifi' },
+      // aboutCardTitle: 'About Me',
+      // aboutCardText: 'Learn about what it is that got me into fitness as well as my crazy team I work with every day!',
 
       shopItemIcon: { name: 'phone' },
       shopItemTitle: 'Burn it Babe',
@@ -81,30 +72,25 @@ class Home extends Component {
       <React.Fragment>
         <CssBaseline />
         <MobileTopbar currentPath={currentPath} />
-        <CardHeader className={classes.media}
-          title={
-          <Typography variant="h5">
-          Don't know how to reach your fitness goal?</Typography>
-          }
-           />
-        <CardMedia
-          component="img"
-          className={classes.media}
-          image={topImage}
-        />
+        <HomeHeader />
         <div className={classes.root}>
           <Grid container justify="center">
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
-              <CardItem
+              {/* <CardItem
                 homePageIcon={this.state.aboutIcon.name}
                 homePageIconColor={this.state.iconFillColor}
                 homePageCardTitle={this.state.aboutCardTitle}
                 homePageCardText={this.state.aboutCardText}
                 homeButtonText={this.state.homeToAboutButtonText}
                 homeToPageLinkToString={this.state.homeToAboutLinkToString}
-              />
+              /> */}
               <Grid item xs={12} sm={6}>
-                <SectionHeader title="Hey there, I'm Randi" subtitle="Esse aute nisi enim consequat dolor laboris do do id." />
+              <Typography variant="subtitle1">
+              Hey there, I'm Randi
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+        Esse aute nisi enim consequat dolor laboris do do id.
+        </Typography>
               </Grid>
               <Grid item xs={12}>
                 <CardMedia

@@ -12,7 +12,7 @@ const instagram = require('../../../assets/social-instagram.png');
 
 const styles = theme => ({
   root: {
-    backgroundColor: theme.palette.grey['200'],
+    backgroundColor: '#b2b9e1',
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'center',
@@ -22,6 +22,7 @@ const styles = theme => ({
   },
   tagline: {
     marginLeft: 10,
+    color: 'white',
   },
   socialBar: {
     display: 'flex',
