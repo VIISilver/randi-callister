@@ -98,7 +98,7 @@ class Home extends Component {
                 </Paper>
               </Grid>
                 <HomeShopSection />
-                <HomeTransformSlider />
+                {/* <HomeTransformSlider /> */}
             </Grid>
           </Grid>
           <ScrollTop />

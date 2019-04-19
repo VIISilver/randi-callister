@@ -15,6 +15,7 @@ const styles = theme => ({
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
+        marginBottom: 47,
     },
     media: {
         // ⚠️ object-fit is not supported by IE 11.
@@ -56,7 +57,7 @@ class AboutMeReasons extends Component {
                             image={firstImage}
                         />
                         <div className={classes.textOverImage}>
-                            <Typography variant="h6" className={classes.imageText}>
+                            <Typography variant="h5" className={classes.imageText}>
                                 My Story
                             </Typography>
                             <Typography variant="body2" className={classes.imageText}>
@@ -66,7 +67,7 @@ class AboutMeReasons extends Component {
                     </div>
                 </Grid>
                 <Grid item xs={12} className={classes.reasonWrapper}>
-                    <Typography variant="h6">
+                    <Typography variant="h6" color="secondary">
                         My Why
                   </Typography>
                     <Typography variant="body2">
@@ -79,11 +80,11 @@ class AboutMeReasons extends Component {
                     image={thirdImage}
                 />
                 <Grid item xs={12} className={classes.reasonWrapper}>
-                    <Typography variant="h6">
+                    <Typography variant="h6" color="secondary">
                         My Mission
                       </Typography>
                     <Typography variant="body2">
-                        Tempor reprehenderit magna incididunt deserunt excepteur incididunt ipsum laborum cupidatat. Excepteur ullamco mollit ea deserunt voluptate reprehenderit ipsum culpa labore. Dolore quis culpa do in esse adipisicing quis dolore consectetur officia dolore veniam. Consectetur fugiat eu dolor in laborum do sint amet. Officia excepteur non ut aute pariatur. Anim elit labore est minim et deserunt.
+                        Tempor reprehenderit magna incididunt deserunt excepteur incididunt ipsum laborum cupidatat. Excepteur ullamco mollit ea deserunt voluptate reprehenderit ipsum culpa labore. Dolore quis culpa do in esse adipisicing quis dolore consectetur officia dolore veniam.
                       </Typography>
                 </Grid>
                 <CardMedia
@@ -92,7 +93,7 @@ class AboutMeReasons extends Component {
                     image={fourthImage}
                 />
                 <Grid item xs={12} className={classes.reasonWrapper}>
-                    <Typography variant="h6">
+                    <Typography variant="h6" color="secondary">
                         My Credentials
                           </Typography>
                     <Typography variant="body2">

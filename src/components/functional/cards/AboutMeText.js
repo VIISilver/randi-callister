@@ -10,6 +10,7 @@ const styles = theme => ({
     justifyContent: 'center',
     flexDirection: 'column',
     padding: 30,
+    marginBottom: 27,
   },
 })
 
@@ -21,14 +22,14 @@ class AboutMeText extends Component {
     return (
       <Grid container xs={12} className={classes.itemContainer}>
         <Grid item xs={12}>
-          <Typography variant="h6">
+          <Typography variant="h6" color="secondary">
             Hey there, I'm Randi Callister!
                   </Typography>
           <Typography variant="body2">
             Et nisi eiusmod incididunt labore excepteur id fugiat esse. Sit id labore Lorem consectetur enim. Esse cupidatat enim quis sint pariatur est dolore cupidatat consectetur.
                   </Typography>
           <Typography variant="body2">
-            Incididunt exercitation Lorem velit elit sit occaecat dolor irure Lorem id. Est aliquip ullamco laboris cillum eiusmod ullamco excepteur deserunt. Consequat anim et eiusmod mollit qui excepteur est culpa minim minim pariatur pariatur culpa pariatur. Nulla proident esse reprehenderit pariatur ullamco cupidatat duis nulla id occaecat. Velit quis non tempor officia.
+            Incididunt exercitation Lorem velit elit sit occaecat dolor irure Lorem id. Est aliquip ullamco laboris cillum eiusmod ullamco excepteur deserunt.
                   </Typography>
           {/* <Typography variant="body2">
             Commodo sunt nostrud cillum eu et. Laboris sint do minim duis culpa anim consectetur. Laborum irure pariatur consectetur in. Quis excepteur aliqua sit id culpa sint. Exercitation enim ullamco amet occaecat duis ipsum aliqua nulla exercitation esse dolore tempor ex nulla. Eu tempor reprehenderit eiusmod id occaecat ex do. Culpa id ex eiusmod anim quis in cupidatat fugiat.

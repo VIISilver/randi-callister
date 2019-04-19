@@ -86,7 +86,7 @@ class Shop extends Component {
         <CssBaseline />
         <MobileTopbar currentPath={currentPath} />
         <div className={classes.shopTopHeader}>
-          <Typography variant="h2" className={classes.shopTopHeaderText}>
+          <Typography variant="h3" className={classes.shopTopHeaderText}>
             Shop
           </Typography>
         </div>
@@ -94,7 +94,7 @@ class Shop extends Component {
           <Grid container justify="center">
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
           <hr className={classes.subHeadBreak} />
-          <Typography variant="h3">
+          <Typography variant="h5">
             Programs
           </Typography>
           <hr className={classes.subHeadBreak} />

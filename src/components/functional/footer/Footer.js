@@ -66,7 +66,7 @@ class Footer extends React.Component {
           <Grid item xs={9} className={classes.footerText}>
             <Typography color="inherit" className={classes.customFooterSize}>
               <img width={24} src={logo} alt="Randi Callister Running Woman Logo" />
-              <span className={classes.tagline}>Developed by Strength LLC</span>
+              <span className={classes.tagline}>Developed by Binary LLC</span>
             </Typography>
           </Grid>
           <Grid item xs={2} className={classes.socialBar}>

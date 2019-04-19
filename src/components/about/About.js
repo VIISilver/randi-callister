@@ -10,6 +10,7 @@ import Footer from '../functional/footer/Footer';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TeamAboutCard from './aboutcards/TeamAboutCard';
+import AboutHeader from './aboutcards/AboutHeader';
 
 const firstImage = require('../../assets/image8.jpg');
 const secondImage = require('../../assets/image12.jpg');
@@ -34,6 +35,12 @@ const styles = theme => ({
     // ⚠️ object-fit is not supported by IE 11.
     objectFit: 'cover',
     height: "95vh"
+  },
+  subHeadBreak: {
+    margin: 10,
+    borderColor: '#74215a',
+    width: '97%',
+    display: 'block',
   }
 })
 
@@ -68,7 +75,7 @@ class About extends Component {
       <React.Fragment>
         <CssBaseline />
         <MobileTopbar currentPath={currentPath} />
-        <AboutCard />
+        <AboutHeader />
         <div className={classes.root}>
           <Grid container justify="center">
             <Grid
@@ -81,9 +88,11 @@ class About extends Component {
               <AboutMeText />
               <AboutMeReasons />
               <Grid item xs={12}>
-                <Typography variant="h6">
+          <hr className={classes.subHeadBreak} />
+                <Typography variant="h6" align="center">
                   GET TO KNOW THE TEAM
                 </Typography>
+          <hr className={classes.subHeadBreak} />
               </Grid>
               <TeamAboutCard
                 teamMemberName={this.state.name}

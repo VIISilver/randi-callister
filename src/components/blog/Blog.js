@@ -90,7 +90,7 @@ class Blog extends Component {
         <CssBaseline />
         <MobileTopbar currentPath={currentPath} />
         <div className={classes.blogTopHeader}>
-          <Typography variant="h2" className={classes.blogTopHeaderText}>
+          <Typography variant="h3" className={classes.blogTopHeaderText}>
             Blog
           </Typography>
         </div>
