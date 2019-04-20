@@ -34,7 +34,7 @@ class HomeHeader extends Component {
       super(props);
   
       this.state = {
-        homeHeaderButtonText: 'Follow Randi',
+        homeHeaderButtonText: 'Contact Randi',
         homeHeadertoContactLinkToString: '/contact',
       }
     }

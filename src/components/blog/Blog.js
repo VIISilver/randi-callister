@@ -91,7 +91,7 @@ class Blog extends Component {
         <MobileTopbar currentPath={currentPath} />
         <div className={classes.blogTopHeader}>
           <Typography variant="h3" className={classes.blogTopHeaderText}>
-            Blog
+            Pro Tips
           </Typography>
         </div>
         <div className={classes.root}>

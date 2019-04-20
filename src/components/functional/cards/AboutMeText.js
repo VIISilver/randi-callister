@@ -23,7 +23,7 @@ class AboutMeText extends Component {
       <Grid container xs={12} className={classes.itemContainer}>
         <Grid item xs={12}>
           <Typography variant="h6" color="secondary">
-            Hey there, I'm Randi Callister!
+            Hey there, I'm Randi Wolsey!
                   </Typography>
           <Typography variant="body2">
             Et nisi eiusmod incididunt labore excepteur id fugiat esse. Sit id labore Lorem consectetur enim. Esse cupidatat enim quis sint pariatur est dolore cupidatat consectetur.

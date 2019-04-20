@@ -87,33 +87,6 @@ class About extends Component {
             >
               <AboutMeText />
               <AboutMeReasons />
-              <Grid item xs={12}>
-          <hr className={classes.subHeadBreak} />
-                <Typography variant="h6" align="center">
-                  GET TO KNOW THE TEAM
-                </Typography>
-          <hr className={classes.subHeadBreak} />
-              </Grid>
-              <TeamAboutCard
-                teamMemberName={this.state.name}
-                teamMemberDescription={this.state.description}
-                teamMemberImage={this.state.image}
-              />
-              <TeamAboutCard
-                teamMemberName={this.state.name1}
-                teamMemberDescription={this.state.description1}
-                teamMemberImage={this.state.image1}
-              />
-              <TeamAboutCard
-                teamMemberName={this.state.name2}
-                teamMemberDescription={this.state.description2}
-                teamMemberImage={this.state.image2}
-              />
-              <TeamAboutCard
-                teamMemberName={this.state.name3}
-                teamMemberDescription={this.state.description3}
-                teamMemberImage={this.state.image3}
-              />
               <ScrollTop />
             </Grid>
           </Grid>

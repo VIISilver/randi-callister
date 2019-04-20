@@ -11,7 +11,7 @@ import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 // import FavoriteIcon from '@material-ui/icons/Favorite';
-// import ShareIcon from '@material-ui/icons/Share';
+import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
@@ -69,9 +69,12 @@ class BlogEntryCard extends React.Component {
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-        <Typography component="p">
+        {/* <Typography component="p">
           {this.props.pageLongDate}
-          </Typography>
+          </Typography> */}
+          <IconButton aria-label="Share">
+            <ShareIcon />
+          </IconButton>
           <IconButton
             className={classnames(
                 {[classes.expandOpen]: !this.state.expanded},

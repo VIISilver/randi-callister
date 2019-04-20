@@ -12,7 +12,7 @@ const Menu = [
       pathname: "/shop"
     },
     {
-      label: "Blog",
+      label: "Pro Tips",
       pathname: "/blog"
     },
     {

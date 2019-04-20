@@ -129,7 +129,7 @@ class MobileTopbar extends Component {
                     <Typography variant="h6" color="inherit" noWrap>
                       <Link to='/' className={classes.link}>
                         <img width={24} src={logo} alt="Randi Callister Running Woman Logo" />
-                        <span className={classes.tagline}>Randi Callister</span>
+                        <span className={classes.tagline}>Randi Wolsey</span>
                       </Link>
                     </Typography>
                   </div>
