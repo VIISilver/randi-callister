@@ -51,6 +51,14 @@ const currencies = [
     {
         value: 'Support',
         label: 'Support',
+    },
+    {
+        value: 'Questions',
+        label: 'Questions',
+    },
+    {
+        value: 'Purchasing',
+        label: 'Purchasing',
     }
 ];
 
