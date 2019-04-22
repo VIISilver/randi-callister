@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 import CardHeader from '@material-ui/core/CardHeader';
-import ButtonBar from '../../functional/buttons/ButtonBar';
 
 const topImage = require('../../../assets/image18.jpg');
 

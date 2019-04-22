@@ -11,7 +11,7 @@ import Paper from '@material-ui/core/Paper';
 import HomeHeader from './homecards/HomeHeader';
 import ButtonBar from '../functional/buttons/ButtonBar';
 import HomeShopSection from './homecards/HomeShopSection';
-import HomeTransformSlider from './homecards/HomeTransformSlider';
+// import HomeTransformSlider from './homecards/HomeTransformSlider';
 
 const aboutImage = require('../../assets/image13.jpg');
 

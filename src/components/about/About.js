@@ -2,20 +2,12 @@ import React, { Component } from 'react';
 import MobileTopbar from '../functional/navigation/MobileTopbar';
 import withStyles from '@material-ui/core/styles/withStyles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import AboutCard from '../functional/cards/AboutCard.js';
 import AboutMeText from '../functional/cards/AboutMeText.js';
 import AboutMeReasons from '../functional/cards/AboutMeReasons.js';
 import ScrollTop from '../functional/buttons/ScrollTop';
 import Footer from '../functional/footer/Footer';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import TeamAboutCard from './aboutcards/TeamAboutCard';
 import AboutHeader from './aboutcards/AboutHeader';
-
-const firstImage = require('../../assets/image8.jpg');
-const secondImage = require('../../assets/image12.jpg');
-const thirdImage = require('../../assets/image9.jpg');
-const fourthImage = require('../../assets/image14.jpg');
 
 const styles = theme => ({
 
@@ -51,18 +43,7 @@ class About extends Component {
     super(props);
 
     this.state = {
-      name: 'Joe',
-      description: 'Veniam id pariatur do sint Lorem.',
-      image: firstImage,
-      name1: 'Jane',
-      description1: 'Laborum quis excepteur id cillum laboris.',
-      image1: secondImage,
-      name2: 'Mav',
-      description2: 'Ut est qui occaecat ea nulla ut.',
-      image2: thirdImage,
-      name3: 'Fido',
-      description3: 'Pariatur non qui labore mollit eu consequat.',
-      image3: fourthImage
+      name: ''
     }
   }
 
