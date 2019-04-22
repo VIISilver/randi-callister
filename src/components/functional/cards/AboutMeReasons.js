@@ -3,10 +3,9 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import CardMedia from '@material-ui/core/CardMedia';
+import Paper from '@material-ui/core/Paper';
 
 const firstImage = require('../../../assets/image3.jpg');
-const thirdImage = require('../../../assets/image5.jpg');
-const fourthImage = require('../../../assets/image6.jpg');
 const fifthImage = require('../../../assets/image7.jpg');
 
 const styles = theme => ({
@@ -15,7 +14,7 @@ const styles = theme => ({
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        marginBottom: 47,
+        marginBottom: 23,
     },
     media: {
         // ⚠️ object-fit is not supported by IE 11.
@@ -39,6 +38,9 @@ const styles = theme => ({
     },
     reasonWrapper: {
         padding: 30,
+    },
+    paperCredentials: {
+        marginTop: 30,    
     }
 })
 
@@ -50,6 +52,7 @@ class AboutMeReasons extends Component {
         return (
             <Grid container xs={12} className={classes.itemContainer}>
                 <Grid item xs={12}>
+                <Paper>
                     <div className={classes.positionSetter}>
                         <CardMedia
                             component="img"
@@ -58,40 +61,16 @@ class AboutMeReasons extends Component {
                         />
                         <div className={classes.textOverImage}>
                             <Typography variant="h5" className={classes.imageText}>
-                                My Story
+                            My Mission
                             </Typography>
                             <Typography variant="body2" className={classes.imageText}>
                                 Tempor duis id laboris Lorem adipisicing ad sunt reprehenderit. Aute enim laboris eiusmod velit. Voluptate commodo quis Lorem id est ea deserunt eu commodo elit commodo ipsum.
                             </Typography>
                         </div>
                     </div>
+                    </Paper>
                 </Grid>
-                <Grid item xs={12} className={classes.reasonWrapper}>
-                    <Typography variant="h6" color="secondary">
-                        My Why
-                  </Typography>
-                    <Typography variant="body2">
-                        Incididunt nisi cupidatat nostrud culpa. Officia ullamco nulla cillum do velit sit duis ullamco occaecat cillum amet ut. Magna sint culpa nulla adipisicing excepteur ex.
-                  </Typography>
-                </Grid>
-                <CardMedia
-                    component="img"
-                    className={classes.media}
-                    image={thirdImage}
-                />
-                <Grid item xs={12} className={classes.reasonWrapper}>
-                    <Typography variant="h6" color="secondary">
-                        My Mission
-                      </Typography>
-                    <Typography variant="body2">
-                        Tempor reprehenderit magna incididunt deserunt excepteur incididunt ipsum laborum cupidatat. Excepteur ullamco mollit ea deserunt voluptate reprehenderit ipsum culpa labore. Dolore quis culpa do in esse adipisicing quis dolore consectetur officia dolore veniam.
-                      </Typography>
-                </Grid>
-                <CardMedia
-                    component="img"
-                    className={classes.media}
-                    image={fourthImage}
-                />
+                <Paper className={classes.paperCredentials}>
                 <Grid item xs={12} className={classes.reasonWrapper}>
                     <Typography variant="h6" color="secondary">
                         My Credentials
@@ -105,6 +84,7 @@ class AboutMeReasons extends Component {
                     className={classes.media}
                     image={fifthImage}
                 />
+                </Paper>
             </Grid>
         )
     }

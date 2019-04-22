@@ -36,6 +36,11 @@ const styles = theme => ({
     },
     menu: {
         width: 200,
+    },
+    subHeadBreak: {
+      borderColor: '#74215a',
+      width: '100%',
+      display: 'block',
     }
 })
 
@@ -111,7 +116,7 @@ class Contact extends Component {
                             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
                                 <Grid item xs={12} sm={6}>
                                     <Typography variant='h5'>Get in Touch</Typography>
-                                    <hr />
+                                    <hr className={classes.subHeadBreak} />
                                     <Typography variant='body2'>Please note that I am very busy and will do everything in my power to respond</Typography>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
