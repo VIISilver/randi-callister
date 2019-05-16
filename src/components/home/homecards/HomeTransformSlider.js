@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -18,7 +19,7 @@ const styles = theme => ({
     margin: theme.spacing.unit * 2,
   },
   carouselImage: {
-    height: 350,
+    height: 300,
   },
   transitionHeader: {
     padding: theme.spacing.unit * 2,
@@ -35,17 +36,19 @@ const styles = theme => ({
 class HomeTransformSlider extends Component {
   state = {
     firstChecked: true,
+    activationForButtons: true,
     secondChecked: false,
   };
 
   handleChange = () => {
     this.setState(state => ({ firstChecked: !state.firstChecked }));
     this.setState(state => ({ secondChecked: !state.secondChecked }));
+    this.setState(state => ({ activationForButtons: !state.activationForButtons }));
   };
 
   render() {
     const { classes } = this.props;
-    const { firstChecked, secondChecked } = this.state;
+    const { firstChecked, secondChecked, activationForButtons } = this.state;
 
     return (
       <Grid xs={12}>
@@ -79,10 +82,16 @@ class HomeTransformSlider extends Component {
         </Slide>
         <div className={classes.itemContainer}>
           <button
-            className={"pagination-switch"}
+            className={classnames(
+              "pagination-switch",
+              {["pag-switch-background"]: activationForButtons}
+              )}
             checked={firstChecked} onClick={this.handleChange} aria-label="Collapse"></button>
           <button
-            className={"pagination-switch"}
+            className={classnames(
+              "pagination-switch",
+              {["pag-switch-background"]: !activationForButtons}
+              )}
             checked={secondChecked} onClick={this.handleChange} aria-label="Collapse"></button>
         </div>
       </Grid>

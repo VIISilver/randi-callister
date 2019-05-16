@@ -13,7 +13,7 @@ const Menu = [
     },
     {
       label: "Pro Tips",
-      pathname: "/blog"
+      pathname: "/protips"
     },
     {
       label: "Contact",

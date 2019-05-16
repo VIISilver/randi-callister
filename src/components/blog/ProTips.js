@@ -8,8 +8,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import BlogEntryCard from './blogComponents/BlogEntryCard';
 
-const shoeWeightImage = require('../../assets/image13.jpg');
-const buildingRainImage = require('../../assets/image10.jpg');
+const shoeWeightImage = require('../../assets/image9.jpg');
+const buildingRainImage = require('../../assets/image14.jpg');
 const mountainTopImage = require('../../assets/image12.jpg');
 
 
@@ -46,14 +46,14 @@ const styles = theme => ({
   }
 })
 
-class Blog extends Component {
+class ProTips extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
       blogPostCardImage: shoeWeightImage,
-      blogPostCardTitle: 'Blog Post 1',
+      blogPostCardTitle: 'Pro Tip 1',
       blogVisibleSubText: 'Magna aliqua nulla officia consectetur anim ex.',
       blogLongDate: 'March 29, 2019',
       blogNonVisible1: 'Duis excepteur Lorem dolor amet proident labore cupidatat minim ad proident officia aliqua amet.',
@@ -62,7 +62,7 @@ class Blog extends Component {
       blogNonVisible4: 'Excepteur aliquip aute sint dolore.',
 
       blogPostCardImage1: buildingRainImage,
-      blogPostCardTitle1: 'Blog Post 2',
+      blogPostCardTitle1: 'Pro Tip 2',
       blogVisibleSubText1: 'Anim incididunt ad voluptate amet fugiat sunt voluptate sunt non anim ullamco fugiat.',
       blogLongDate1: 'March 31, 2019',
       blog1NonVisible1: 'Ea sit dolore tempor qui do nisi deserunt minim esse laborum.',
@@ -71,7 +71,7 @@ class Blog extends Component {
       blog1NonVisible4: 'Irure minim tempor non labore aliqua. Irure proident consequat in dolore veniam voluptate. Voluptate non qui nisi id exercitation esse Lorem labore id.',
 
       blogPostCardImage2: mountainTopImage,
-      blogPostCardTitle2: 'Blog Post 3',
+      blogPostCardTitle2: 'Pro Tip 3',
       blogVisibleSubText2: 'Tempor et cillum dolore id reprehenderit duis sit labore.',
       blogLongDate2: 'April 3, 2019',
       blog2NonVisible1: 'Deserunt consequat nostrud laboris aute. Velit minim labore non est aliquip quis. Dolore cillum do dolor elit ex duis aliquip nulla aliquip aute. Lorem cillum non eiusmod voluptate ex reprehenderit non tempor cillum sunt do.',
@@ -137,4 +137,4 @@ class Blog extends Component {
   }
 }
 
-export default withStyles(styles)(Blog);
+export default withStyles(styles)(ProTips);
