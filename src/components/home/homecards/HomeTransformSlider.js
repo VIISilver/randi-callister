@@ -1,74 +1,91 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Switch from '@material-ui/core/Switch';
+import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Slide from '@material-ui/core/Slide';
 import CardMedia from '@material-ui/core/CardMedia';
 import './HomeTransformSlider.css';
+import { Typography } from '@material-ui/core';
 
-const firstCarouselImage = require('../../../assets/image11.jpg');
+const firstCarouselImage = require('../../../assets/client2-transformation.JPG');
+const secondCarouselImage = require('../../../assets/client1-transformation-v2.jpg');
 
 const styles = theme => ({
-  root: {
-    padding: 250,
-    marginTop: 90,
-  },
-  wrapper: {
-    width: 100 + theme.spacing.unit * 2,
-  },
   paper: {
     zIndex: 1,
     position: 'relative',
-    margin: theme.spacing.unit,
-  },
-  svg: {
-    width: 100,
-    height: 100,
-  },
-  polygon: {
-    fill: theme.palette.common.white,
-    stroke: theme.palette.divider,
-    strokeWidth: 1,
+    margin: theme.spacing.unit * 2,
   },
   carouselImage: {
-    width: 250,
+    height: 350,
+  },
+  transitionHeader: {
+    padding: theme.spacing.unit * 2,
+  },
+  itemContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+
   }
 });
 
 class HomeTransformSlider extends Component {
   state = {
-    checked: false,
+    firstChecked: true,
+    secondChecked: false,
   };
 
   handleChange = () => {
-    this.setState(state => ({ checked: !state.checked }));
+    this.setState(state => ({ firstChecked: !state.firstChecked }));
+    this.setState(state => ({ secondChecked: !state.secondChecked }));
   };
 
   render() {
     const { classes } = this.props;
-    const { checked } = this.state;
+    const { firstChecked, secondChecked } = this.state;
 
     return (
-      <div className={classes.root} className={"app-border"}>
-        <div className={classes.wrapper}>
-          <Slide direction="right" in={checked} mountOnEnter unmountOnExit>
-            <Paper elevation={4} className={classes.paper}>
+      <Grid xs={12}>
+        <Paper elevation={5} className={classes.paper} className={classes.transitionHeader}>
+          <Typography variant="h5" align='center'>
+            Transformations
+        </Typography>
+          <Typography variant="body1" align='center'>
+            Ready to add yours?
+        </Typography>
+        </Paper>
+        <Slide direction="right" in={firstChecked} mountOnEnter unmountOnExit
+          timeout={{ appear: 0, enter: 700, exit: 0 }}>
+          <Paper elevation={4} className={classes.paper}>
             <CardMedia
-                  component="img"
-                  image={firstCarouselImage}
-                  className={classes.carouselImage}
-                />
-            </Paper>
-          </Slide>
-          <button 
-          className={"pagination-switch"}
-          checked={checked} onClick={this.handleChange} aria-label="Collapse"></button>
-          <button 
-          className={"pagination-switch"}
-          checked={checked} onClick={this.handleChange} aria-label="Collapse"></button>
+              component="img"
+              image={firstCarouselImage}
+              className={classes.carouselImage}
+            />
+          </Paper>
+        </Slide>
+        <Slide direction="right" in={secondChecked} mountOnEnter unmountOnExit
+          timeout={{ enter: 700, exit: 0 }}>
+          <Paper elevation={4} className={classes.paper}>
+            <CardMedia
+              component="img"
+              image={secondCarouselImage}
+              className={classes.carouselImage}
+            />
+          </Paper>
+        </Slide>
+        <div className={classes.itemContainer}>
+          <button
+            className={"pagination-switch"}
+            checked={firstChecked} onClick={this.handleChange} aria-label="Collapse"></button>
+          <button
+            className={"pagination-switch"}
+            checked={secondChecked} onClick={this.handleChange} aria-label="Collapse"></button>
         </div>
-      </div>
+      </Grid>
     );
   }
 }

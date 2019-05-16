@@ -18,6 +18,7 @@ const styles = {
     },
     homeAboutSectionWrapper: {
         marginTop: 70,
+        marginBottom: 70,
     },
     itemContainer: {
             display: 'flex',
