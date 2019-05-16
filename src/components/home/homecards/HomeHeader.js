@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import CardHeader from '@material-ui/core/CardHeader';
 import ButtonBar from '../../functional/buttons/ButtonBar';
 
-const topImage = require('../../../assets/image17.jpg');
+const topImage = require('../../../assets/cover-image.jpg');
 
 const styles = () => ({
     media: {

@@ -6,7 +6,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Paper from '@material-ui/core/Paper';
 
 const firstImage = require('../../../assets/image3.jpg');
-const fifthImage = require('../../../assets/image7.jpg');
+const randiCertImage = require('../../../assets/randi-cfsc-cert.JPG');
 
 const styles = theme => ({
     itemContainer: {
@@ -82,7 +82,7 @@ class AboutMeReasons extends Component {
                 <CardMedia
                     component="img"
                     className={classes.media}
-                    image={fifthImage}
+                    image={randiCertImage}
                 />
                 </Paper>
             </Grid>

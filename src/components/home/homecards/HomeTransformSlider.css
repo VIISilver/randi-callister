@@ -1,0 +1,12 @@
+.pagination-switch {
+    border: 1px solid #333;
+    border-radius: 1.5em 1.5em 1.5em 1.5em;
+    display: inline-block;
+    cursor: pointer;
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0 .25em;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.2s linear 0s, border-color 0.2s linear 0s;
+}
+
