@@ -52,7 +52,7 @@ class HomeTransformSlider extends Component {
 
     return (
       <Grid xs={12}>
-        <Paper elevation={5} className={classes.paper} className={classes.transitionHeader}>
+        <Paper elevation={5} className={classnames(classes.paper, classes.transitionHeader)}>
           <Typography variant="h5" align='center'>
             Transformations
         </Typography>

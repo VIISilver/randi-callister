@@ -100,7 +100,7 @@ class MobileTopbar extends Component {
     if(this.props.currentPath === '/shop') {
       return 2
     }
-    if(this.props.currentPath === '/ProTips') {
+    if(this.props.currentPath === '/protips') {
       return 3
     }
     if(this.props.currentPath === '/contact') {
