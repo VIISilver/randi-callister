@@ -1,10 +1,10 @@
 .pagination-switch {
     border: 1px solid #333;
-    border-radius: 1.5em 1.5em 1.5em 1.5em;
+    border-radius: 15px;
     display: inline-block;
     cursor: pointer;
-    height: 1.5em;
-    width: 1.5em;
+    height: 15px;
+    width: 15px;
     margin: 0 .25em;
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.2s linear 0s, border-color 0.2s linear 0s;
@@ -12,4 +12,9 @@
 
 .pag-switch-background {
     background-color: #333;
+}
+
+.transform-carousel-img-shadow {
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    border-radius: 4px;
 }

@@ -20,6 +20,10 @@ const styles = theme => ({
   },
   carouselImage: {
     height: 300,
+    width: 366,
+    zIndex: 1,
+    position: 'relative',
+    margin: theme.spacing.unit * 2,
   },
   transitionHeader: {
     padding: theme.spacing.unit * 2,
@@ -60,26 +64,24 @@ class HomeTransformSlider extends Component {
             Ready to add yours?
         </Typography>
         </Paper>
+        <div className={classes.itemContainer}>
         <Slide direction="right" in={firstChecked} mountOnEnter unmountOnExit
           timeout={{ appear: 0, enter: 700, exit: 0 }}>
-          <Paper elevation={4} className={classes.paper}>
             <CardMedia
               component="img"
               image={firstCarouselImage}
-              className={classes.carouselImage}
+              className={classnames(classes.carouselImage, "transform-carousel-img-shadow")}
             />
-          </Paper>
         </Slide>
         <Slide direction="right" in={secondChecked} mountOnEnter unmountOnExit
           timeout={{ enter: 700, exit: 0 }}>
-          <Paper elevation={4} className={classes.paper}>
             <CardMedia
               component="img"
               image={secondCarouselImage}
-              className={classes.carouselImage}
+              className={classnames(classes.carouselImage, "transform-carousel-img-shadow")}
             />
-          </Paper>
         </Slide>
+        </div>
         <div className={classes.itemContainer}>
           <button
             className={classnames(
