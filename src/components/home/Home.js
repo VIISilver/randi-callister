@@ -79,10 +79,10 @@ class Home extends Component {
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
               <Grid item xs={6}>
                 <Typography variant="h5">
-                  Hey there, I'm Randi
+                Hey there! I'm Randi!
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  Esse aute nisi enim consequat dolor laboris do do id.
+                I am a Health and fitness professional and I love every minute of it. Click below to learn more about me and how I got to where I am today!
                 </Typography>
               <ButtonBar 
               pageToPageLinkToString={this.state.homeToAboutLinkToString} 
