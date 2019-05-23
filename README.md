@@ -24,8 +24,3 @@ New image and about sentence (for the home page)
 <p>
 need email address to send information to (for contact page)
 </p><br>
-<p>
-My To do:<br>
-Add categories to the Contact page (Questions and Purchasing)<br>
-Remove date from the blog card and add the share button
-</p>
