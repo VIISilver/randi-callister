@@ -51,29 +51,29 @@ class Shop extends Component {
     super(props);
 
     this.state = {
-      shopCardWomanTitle: 'Burn It Babe',
+      shopCardWomanTitle: 'Woman’s summer weight loss challenge:',
       shopCardWomanImage: burnItImage,
-      shopWomanVisibleSubText: 'Excepteur magna laboris do commodo quis dolore consectetur elit occaecat aliquip.',
-      shopWomanNonVisibleSubText1: 'Deets:',
-      shopWomanNonVisibleSubText2: 'In reprehenderit magna esse aliquip aute ex anim enim.',
-      shopWomanNonVisibleSubText3: 'Labore est magna ipsum enim fugiat esse. Qui enim tempor reprehenderit do dolore nisi ea sint. Ut eiusmod amet dolore deserunt sunt laborum aute labore ea minim est laboris ut.',
-      shopWomanNonVisibleSubText4: 'Cillum minim sint quis laborum non magna sint.',
+      shopWomanVisibleSubText: '',
+      shopWomanNonVisibleSubText1: 'Have you ever told yourself that weight loss and getting fit our seasonal? Do you feel like it if you haven’t reached your goals by the start of summer it’s too late? I have created this 8 week long challenge to help you break through this myth and see that a healthier you is possible anytime of the year. This Challenge begins June 3 and cost is only $30 for a full eight week workout plan, nutrition guidance and healthy life style tips. Save 20% with early registration by May 31st!',
+      shopWomanNonVisibleSubText2: '',
+      shopWomanNonVisibleSubText3: '',
+      shopWomanNonVisibleSubText4: '',
 
-      shopCardManTitle: 'Burn It Bro',
+      shopCardManTitle: 'Weekly personalized training:',
       shopCardManImage: burnItBroImage,
-      shopManVisibleSubText: 'Ipsum deserunt deserunt non sint in qui exercitation pariatur excepteur.',
-      shopManNonVisibleSubText1: 'Details:',
-      shopManNonVisibleSubText2: 'Laboris sint eiusmod laborum proident.',
-      shopManNonVisibleSubText3: 'Labore aliquip aute sint dolore. Ullamco irure laborum ullamco elit Lorem esse aute adipisicing minim ea sunt ullamco. Magna et dolore et quis eiusmod labore aliqua. Ut dolore do est veniam et.',
-      shopManNonVisibleSubText4: 'Mollit culpa sunt consequat qui. Aute consectetur enim deserunt adipisicing culpa culpa quis proident. Occaecat voluptate Lorem commodo do esse sint commodo. Cillum nisi reprehenderit labore Lorem anim ipsum elit cupidatat ad amet irure fugiat.',
+      shopManVisibleSubText: '',
+      shopManNonVisibleSubText1: 'After a one on one online consultation, I will provide for you a personalized week by week fitness plan designed specifically to meet your individual needs and goals!',
+      shopManNonVisibleSubText2: '',
+      shopManNonVisibleSubText3: '',
+      shopManNonVisibleSubText4: '',
 
-      shopCardNutrientTitle: 'Nutrition Only',
+      shopCardNutrientTitle: 'The ultimate nutrition guide:',
       shopCardNutrientImage: nutrientImage,
-      shopNutrientVisibleSubText: 'Nisi in duis labore voluptate cupidatat do consequat id occaecat.',
-      shopNutrientNonVisibleSubText1: 'How it works:',
-      shopNutrientNonVisibleSubText2: 'Esse aliquip excepteur laboris consequat aliqua enim aliqua amet cupidatat ex tempor in id sint. Lorem deserunt ex qui aute adipisicing laboris. Laboris laborum mollit irure amet dolor laboris exercitation tempor eu cupidatat aute ad et aliqua. Tempor quis anim irure duis in aliquip commodo ullamco non.',
-      shopNutrientNonVisibleSubText3: 'Sit cupidatat culpa commodo cupidatat sit culpa qui minim amet est consequat aliquip. Laborum adipisicing commodo do pariatur culpa mollit exercitation exercitation reprehenderit eiusmod voluptate. Sunt est officia non enim cupidatat eu magna anim eiusmod consequat in culpa ullamco.',
-      shopNutrientNonVisibleSubText4: 'Nostrud ea officia dolor do excepteur laboris quis labore pariatur. Anim reprehenderit anim tempor magna esse nulla irure do dolor exercitation aliqua occaecat excepteur nisi. Duis in eiusmod laborum irure irure sit excepteur ex in voluptate et nulla aliqua irure. Qui ad mollit quis quis do non velit aliqua dolore.',
+      shopNutrientVisibleSubText: '',
+      shopNutrientNonVisibleSubText1: '(Coming soon)',
+      shopNutrientNonVisibleSubText2: 'This nutrition guide is packed full of educational nutrition information, comprehensive meal plans complete with shopping lists and easy to follow recipes!',
+      shopNutrientNonVisibleSubText3: '',
+      shopNutrientNonVisibleSubText4: '',
     }
   }
 
@@ -125,6 +125,15 @@ class Shop extends Component {
                 pageNonVisible3={this.state.shopNutrientNonVisibleSubText3}
                 pageNonVisible4={this.state.shopNutrientNonVisibleSubText4}
               />
+              {/* <ShopItemCard
+                pageCardHeaderTitle={this.state.shopCardNutrientTitle}
+                pageCardImage={this.state.shopCardNutrientImage}
+                pageVisibleSubText={this.state.shopNutrientVisibleSubText}
+                pageNonVisible1={this.state.shopNutrientNonVisibleSubText1}
+                pageNonVisible2={this.state.shopNutrientNonVisibleSubText2}
+                pageNonVisible3={this.state.shopNutrientNonVisibleSubText3}
+                pageNonVisible4={this.state.shopNutrientNonVisibleSubText4}
+              /> */}
               {/* <hr className={classes.subHeadBreak} />
               <Typography variant="h3">
                 Challenges
