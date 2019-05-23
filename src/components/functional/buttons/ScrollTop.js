@@ -39,7 +39,7 @@ class ScrollTop extends Component {
 
     atBottomOfPage() {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            document.getElementById("myBtn").style.bottom = "2.5em";
+            document.getElementById("myBtn").style.bottom = "3em";
         } else {
             document.getElementById("myBtn").style.bottom = ".5em";
         }
