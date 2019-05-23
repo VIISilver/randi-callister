@@ -77,19 +77,15 @@ class Home extends Component {
         <div className={classes.root}>
           <Grid container justify="center">
             <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
-              <Grid item xs={6}>
-                <Typography variant="h5">
+              <Grid item xs={5} sm={6}>
+                <Typography variant="h6">
                 Hey there! I'm Randi!
                 </Typography>
-                <Typography variant="body2" gutterBottom>
-                I am a Health and fitness professional and I love every minute of it. Click below to learn more about me and how I got to where I am today!
+                <Typography variant="body1" gutterBottom>
+                I am a Health and fitness professional and I love every minute of it.
                 </Typography>
-              <ButtonBar 
-              pageToPageLinkToString={this.state.homeToAboutLinkToString} 
-              pageButtonText={this.state.homeToAboutButtonText} 
-              />
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={5} sm={6}>
               <Paper>
                 <CardMedia
                   component="img"
@@ -97,10 +93,17 @@ class Home extends Component {
                 />
                 </Paper>
               </Grid>
-                <HomeShopSection />
-                <HomeTransformSlider />
+                {/* <Typography variant="body1" gutterBottom>
+                   Click below to learn more about me and how I got to where I am today!
+                </Typography> */}
+              <ButtonBar 
+              pageToPageLinkToString={this.state.homeToAboutLinkToString} 
+              pageButtonText={this.state.homeToAboutButtonText} 
+              />
             </Grid>
           </Grid>
+                <HomeShopSection />
+                <HomeTransformSlider />
           <ScrollTop />
         </div>
         <Footer />

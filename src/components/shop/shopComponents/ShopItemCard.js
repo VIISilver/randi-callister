@@ -34,8 +34,13 @@ const styles = theme => ({
       duration: theme.transitions.duration.shortest,
     }),
   },
-  expandOpen: {
+  closeExpand: {
     transform: 'rotate(180deg)',
+    display: 'block',
+    marginLeft: 'auto',
+  },
+  expandOpen: {
+    display: 'none',
   },
 });
 
@@ -65,11 +70,19 @@ class ShopItemCard extends React.Component {
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          {/* <IconButton aria-label="Add to favorites">
-            <FavoriteIcon />
-          </IconButton> */}
           <IconButton aria-label="Share">
             <ShareIcon />
+          </IconButton>
+          <IconButton
+            className={classnames(
+                {[classes.expandOpen]: !this.state.expanded},
+                {[classes.closeExpand]: this.state.expanded}
+                )}
+            onClick={this.handleExpandClick}
+            aria-expanded={this.state.expanded}
+            aria-label="Show more"
+          >
+            <ExpandMoreIcon />
           </IconButton>
           <IconButton
             className={classnames(classes.expand, {
@@ -79,7 +92,9 @@ class ShopItemCard extends React.Component {
             aria-expanded={this.state.expanded}
             aria-label="Show more"
           >
-            <ExpandMoreIcon />
+          <Typography component="p" variant="body1">
+          Learn more...
+          </Typography>
           </IconButton>
         </CardActions>
         <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>

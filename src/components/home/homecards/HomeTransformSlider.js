@@ -19,8 +19,8 @@ const styles = theme => ({
     margin: theme.spacing.unit * 2,
   },
   carouselImage: {
-    height: 300,
-    width: 366,
+    height: 204,
+    width: 250,
     zIndex: 1,
     position: 'relative',
     margin: theme.spacing.unit * 2,
@@ -55,7 +55,7 @@ class HomeTransformSlider extends Component {
     const { firstChecked, secondChecked, activationForButtons } = this.state;
 
     return (
-      <Grid xs={12}>
+      <Grid xs={12} sm={12}>
         <Paper elevation={5} className={classnames(classes.paper, classes.transitionHeader)}>
           <Typography variant="h5" align='center'>
             Transformations

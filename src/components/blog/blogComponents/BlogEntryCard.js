@@ -94,7 +94,7 @@ class BlogEntryCard extends React.Component {
             aria-expanded={this.state.expanded}
             aria-label="Show more"
           >
-          <Typography component="p">
+          <Typography component="p" variant="body1">
           Read more...
           </Typography>
           </IconButton>

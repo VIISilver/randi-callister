@@ -20,6 +20,7 @@ class ScrollTop extends Component {
 
     handleScroll() {
         this.scrollFunction();
+        this.atBottomOfPage();
     }
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
@@ -33,6 +34,14 @@ class ScrollTop extends Component {
             document.getElementById("myBtn").style.display = "block";
         } else {
             document.getElementById("myBtn").style.display = "none";
+        }
+    };
+
+    atBottomOfPage() {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            document.getElementById("myBtn").style.bottom = "2.5em";
+        } else {
+            document.getElementById("myBtn").style.bottom = ".5em";
         }
     };
 

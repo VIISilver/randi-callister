@@ -17,8 +17,8 @@ const styles = {
         height: 100,
     },
     homeAboutSectionWrapper: {
-        marginTop: 70,
-        marginBottom: 70,
+        marginTop: 90,
+        marginBottom: 90,
     },
     itemContainer: {
             display: 'flex',
@@ -45,10 +45,10 @@ class HomeShopSection extends Component {
         const { classes } = this.props;
         
         return (
-            <Grid className={classes.homeAboutSectionWrapper}>
-                <Typography variant="h5" align='center'>
-                    My Programs
-                </Typography>
+            <Grid item xs={12} className={classes.homeAboutSectionWrapper}>
+                    <Typography variant="h5" align='center'>
+                        My Programs
+                    </Typography>
                 <Grid container justify="center" alignItems="center">
                     <Avatar alt="Burn It Babe Shop Logo" src={burnItBabeImage} className={classes.bigAvatar} />
                     <Avatar alt="Burn It Babe Shop Logo" src={burnItBroImage} className={classes.bigAvatar} />
