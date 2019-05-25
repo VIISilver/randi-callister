@@ -14,11 +14,9 @@ const styles = theme => ({
         flexGrow: 1,
         backgroundColor: 'white',
         overflow: 'hidden',
-        // background: `url(${backgroundShape}) no-repeat`,
         backgroundSize: 'cover',
         backgroundPosition: '0 400px',
         padding: 20,
-        // paddingBottom: 60
     },
     grid: {
         width: 1000
@@ -44,7 +42,7 @@ const styles = theme => ({
     }
 })
 
-const currencies = [
+const emailSubjectsArr = [
     {
         value: 'General',
         label: 'General',
@@ -73,8 +71,10 @@ class Contact extends Component {
         super(props);
 
         this.state = {
-            name: 'Cat in the Hat',
-            age: '',
+            name: '',
+            emailSubject: 'General',
+            emailAddress: '',
+            emailMessage: '',
             multiline: 'Controlled',
             contactButtonText: 'Send Message',
             contactToHomeLinkToString: '/',
@@ -97,7 +97,7 @@ class Contact extends Component {
     handleChange = name => event => {
         this.setState({
             [name]: event.target.value,
-        });
+        }, console.log(this.state));
     }
 
 
@@ -137,6 +137,8 @@ class Contact extends Component {
                                             id="outlined-email-input"
                                             label="Email"
                                             className={classes.textField}
+                                            value={this.state.emailAddress}
+                                            onChange={this.handleChange('emailAddress')}
                                             type="email"
                                             name="email"
                                             autoComplete="email"
@@ -150,8 +152,6 @@ class Contact extends Component {
                                             select
                                             label="Reason for Contact"
                                             className={classes.textField}
-                                            value={this.state.currency}
-                                            onChange={this.handleChange('currency')}
                                             SelectProps={{
                                                 native: true,
                                                 MenuProps: {
@@ -162,8 +162,11 @@ class Contact extends Component {
                                             variant="outlined"
                                             fullWidth
                                         >
-                                            {currencies.map(option => (
-                                                <option key={option.value} value={option.value}>
+                                            {emailSubjectsArr.map(option => (
+                                                <option 
+                                                key={option.value} 
+                                                onClick={this.handleChange('emailSubject')}
+                                                value={option.value}>
                                                     {option.label}
                                                 </option>
                                             ))}
@@ -175,12 +178,15 @@ class Contact extends Component {
                                             multiline
                                             rows="4"
                                             className={classes.textField}
+                                            value={this.state.emailMessage}
+                                            onChange={this.handleChange('emailMessage')}
                                             margin="normal"
                                             variant="outlined"
                                             fullWidth
                                         />
 
                                     </form>
+                                    <button type="submit">Submit</button>
                                     <ButtonBar
                                         pageToPageLinkToString={this.state.contactToHomeLinkToString}
                                         pageButtonText={this.state.contactButtonText}
