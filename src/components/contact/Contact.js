@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 import MobileTopbar from '../functional/navigation/MobileTopbar'
 import withStyles from '@material-ui/core/styles/withStyles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -71,10 +72,10 @@ class Contact extends Component {
         super(props);
 
         this.state = {
-            name: '',
+            emailerName: 'Jared Parker',
             emailSubject: 'General',
-            emailAddress: '',
-            emailMessage: '',
+            emailAddress: 'jared.parker7890@gmail.com',
+            emailMessage: 'Jello World',
             multiline: 'Controlled',
             contactButtonText: 'Send Message',
             contactToHomeLinkToString: '/',
@@ -98,6 +99,30 @@ class Contact extends Component {
         this.setState({
             [name]: event.target.value,
         }, console.log(this.state));
+    }
+
+    handleSubmit(e){
+        e.preventDefault();
+        const emailSenderName = this.state.emailerName;
+        const senderEmailAddress = this.state.emailAddress;
+        const messageFromSender = this.state.emailMessage;
+        console.log('handlesubmit fired')
+        axios({
+            method: "POST", 
+            url:"http://localhost:3005/send", 
+            data: {
+                name: 'Jared Parker',   
+                email: 'jared.parker7890@gmail.com',  
+                messsage: 'for all that is holy please work'
+            }
+        }).then((response)=>{
+            if (response.data.msg === 'success'){
+                alert("Message Sent."); 
+                // this.resetForm()
+            }else if(response.data.msg === 'fail'){
+                alert("Message failed to send.")
+            }
+        })
     }
 
 
@@ -127,6 +152,7 @@ class Contact extends Component {
                                             label="Name"
                                             className={classes.textField}
                                             onChange={this.handleChange('name')}
+                                            value={this.state.emailerName}
                                             margin="normal"
                                             variant="outlined"
                                             fullWidth
@@ -186,7 +212,7 @@ class Contact extends Component {
                                         />
 
                                     </form>
-                                    <button type="submit">Submit</button>
+                                    <button type="submit" onClick={this.handleSubmit.bind(this)} method="POST">Submit</button>
                                     <ButtonBar
                                         pageToPageLinkToString={this.state.contactToHomeLinkToString}
                                         pageButtonText={this.state.contactButtonText}
