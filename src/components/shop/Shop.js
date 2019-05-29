@@ -8,9 +8,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import ShopItemCard from './shopComponents/ShopItemCard';
 
-const burnItImage = require("../../assets/Women's-Summer-Weight-Loss.jpg");
-const burnItBroImage = require('../../assets/Weekly-Personalized-Training.jpg');
-const nutrientImage = require('../../assets/The-Ultimate-Nutrition-Guide.jpg');
+const burnItImage = require("../../assets/Women's-Summer-Weight-Loss-Small.jpg");
+const burnItBroImage = require('../../assets/Weekly-Personalized-Training-Small.jpg');
+const nutrientImage = require('../../assets/The-Ultimate-Nutrition-Guide-Small.jpg');
 
 const styles = theme => ({
   root: {
@@ -26,7 +26,7 @@ const styles = theme => ({
   },
   grid: {
     width: 1000,
-    padding: 10
+    padding: 5
   },
   shopTopHeader: {
     backgroundColor: '#b2b9e1',

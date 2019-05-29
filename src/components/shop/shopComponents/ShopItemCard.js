@@ -22,8 +22,11 @@ const styles = theme => ({
     padding: 5
   },
   shopItemCardMedia: {
-    height: 350,
-    paddingTop: '56.25%', // 16:9
+    maxWidth: 300,
+    height: 'auto',
+    paddingTop: '100%', // 16:9
+    paddingBottom: 0,
+    backgroundPosition: 'top',
   },
   actions: {
     display: 'flex',
@@ -63,7 +66,7 @@ class ShopItemCard extends React.Component {
         <CardMedia
           className={classes.shopItemCardMedia}
           image={this.props.pageCardImage}
-          title="Paella dish"
+          title="Shop, Item Card Image"
         />
         <CardActions className={classes.actions} disableActionSpacing>
           {/* <IconButton aria-label="Share">

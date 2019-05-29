@@ -27,7 +27,7 @@ const styles = theme => ({
   },
   grid: {
     width: 1000,
-    padding: 10
+    padding: 5
   },
   blogTopHeader: {
     backgroundColor: '#b2b9e1',
