@@ -69,12 +69,9 @@ class BlogEntryCard extends React.Component {
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-        {/* <Typography component="p">
-          {this.props.pageLongDate}
-          </Typography> */}
-          <IconButton aria-label="Share">
+          {/* <IconButton aria-label="Share">
             <ShareIcon />
-          </IconButton>
+          </IconButton> */}
           <IconButton
             className={classnames(
                 {[classes.expandOpen]: !this.state.expanded},

@@ -26,7 +26,8 @@ const styles = theme => ({
     paddingTop: 40,
   },
   grid: {
-    width: 1000
+    width: 1000,
+    padding: 10
   },
   blogTopHeader: {
     backgroundColor: '#b2b9e1',

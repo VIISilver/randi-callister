@@ -16,12 +16,13 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 const styles = theme => ({
-  card: {
+  shopItemCardWrapper: {
     maxWidth: 400,
     marginTop: 75,
+    padding: 5
   },
-  media: {
-    height: 375,
+  shopItemCardMedia: {
+    height: 350,
     paddingTop: '56.25%', // 16:9
   },
   actions: {
@@ -55,24 +56,19 @@ class ShopItemCard extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Card className={classes.card}>
+      <Card className={classes.shopItemCardWrapper}>
         <CardHeader
           title={this.props.pageCardHeaderTitle}
         />
         <CardMedia
-          className={classes.media}
+          className={classes.shopItemCardMedia}
           image={this.props.pageCardImage}
           title="Paella dish"
         />
-        <CardContent>
-          <Typography component="p">
-            {this.props.pageVisibleSubText}
-          </Typography>
-        </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton aria-label="Share">
+          {/* <IconButton aria-label="Share">
             <ShareIcon />
-          </IconButton>
+          </IconButton> */}
           <IconButton
             className={classnames(
                 {[classes.expandOpen]: !this.state.expanded},
