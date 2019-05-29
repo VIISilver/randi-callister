@@ -64,9 +64,9 @@ class AboutMeReasons extends Component {
                     <Typography variant="h6" color="secondary">
                         My Credentials
                           </Typography>
-                    <Typography variant="body2">
+                    {/* <Typography variant="body2">
                         Consequat proident incididunt excepteur elit commodo. Qui aliqua id elit minim. Et reprehenderit ipsum consectetur pariatur officia mollit ipsum minim dolor. Commodo dolore laborum incididunt labore Lorem.
-                          </Typography>
+                          </Typography> */}
                 </Grid>
                 <CardMedia
                     component="img"

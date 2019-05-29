@@ -6,15 +6,16 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import ButtonBar from '../../functional/buttons/ButtonBar';
 
-const burnItBabeImage = require('../../../assets/shop/burnit-300x300.png');
-const burnItBroImage = require('../../../assets/shop/burnitdude-300x300.png');
-const nutritionOnlyImage = require('../../../assets/shop/nutritionalonly-300x300.png');
+const burnItBabeImage = require("../../../assets/Women's-Summer-Weight-Loss.jpg");
+const burnItBroImage = require('../../../assets/Weekly-Personalized-Training.jpg');
+const nutritionOnlyImage = require('../../../assets/The-Ultimate-Nutrition-Guide.jpg');
 
 const styles = {
     bigAvatar: {
         margin: 10,
         width: 100,
         height: 100,
+        borderRadius: 0
     },
     homeAboutSectionWrapper: {
         marginTop: 90,
@@ -25,7 +26,6 @@ const styles = {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-        
     }
 };
 

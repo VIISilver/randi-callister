@@ -8,9 +8,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import ShopItemCard from './shopComponents/ShopItemCard';
 
-const burnItImage = require('../../assets/shop/burnit-300x300.png');
-const burnItBroImage = require('../../assets/shop/burnitdude-300x300.png');
-const nutrientImage = require('../../assets/shop/nutritionalonly-300x300.png');
+const burnItImage = require("../../assets/Women's-Summer-Weight-Loss.jpg");
+const burnItBroImage = require('../../assets/Weekly-Personalized-Training.jpg');
+const nutrientImage = require('../../assets/The-Ultimate-Nutrition-Guide.jpg');
 
 const styles = theme => ({
   root: {
@@ -51,7 +51,7 @@ class Shop extends Component {
     super(props);
 
     this.state = {
-      shopCardWomanTitle: 'Woman’s summer weight loss challenge:',
+      shopCardWomanTitle: 'Women’s summer weight loss challenge:',
       shopCardWomanImage: burnItImage,
       shopWomanVisibleSubText: '',
       shopWomanNonVisibleSubText1: 'Have you ever told yourself that weight loss and getting fit our seasonal? Do you feel like it if you haven’t reached your goals by the start of summer it’s too late? I have created this 8 week long challenge to help you break through this myth and see that a healthier you is possible anytime of the year. This Challenge begins June 3 and cost is only $30 for a full eight week workout plan, nutrition guidance and healthy life style tips. Save 20% with early registration by May 31st!',
@@ -67,7 +67,7 @@ class Shop extends Component {
       shopManNonVisibleSubText3: '',
       shopManNonVisibleSubText4: '',
 
-      shopCardNutrientTitle: 'The ultimate nutrition guide:',
+      shopCardNutrientTitle: 'The Ultimate Nutrition Guide:',
       shopCardNutrientImage: nutrientImage,
       shopNutrientVisibleSubText: '',
       shopNutrientNonVisibleSubText1: '(Coming soon)',
