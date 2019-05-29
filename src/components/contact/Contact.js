@@ -7,7 +7,8 @@ import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
-import ButtonBar from '../functional/buttons/ButtonBar';
+import ContactSubmitBtn from '../functional/buttons/ContactSubmitBtn';
+import EmailAlert from '../functional/alerts/EmailAlert';
 import Footer from '../functional/footer/Footer';
 
 const styles = theme => ({
@@ -72,13 +73,14 @@ class Contact extends Component {
         super(props);
 
         this.state = {
-            emailerName: 'Jared Parker',
-            emailSubject: 'this is the subject',
-            emailAddress: 'jared.parker7890@gmail.com',
-            emailMessage: 'I can only hope that this works',
+            emailerName: '',
+            emailSubject: 'General',
+            emailAddress: '',
+            emailMessage: '',
             multiline: 'Controlled',
+            alertOpen: false,
+            emailAlertText: 'This is the text',
             contactButtonText: 'Send Message',
-            contactToHomeLinkToString: '/',
             contactHeight: 0,
             contactWindowHeight: 0,
             bottomNavFixed: false
@@ -98,7 +100,7 @@ class Contact extends Component {
     handleChange = name => event => {
         this.setState({
             [name]: event.target.value,
-        }, console.log(this.state));
+        });
     }
 
     handleSubmit(e){
@@ -107,7 +109,10 @@ class Contact extends Component {
         const senderEmailAddress = this.state.emailAddress;
         const senderEmailSubject = this.state.emailSubject;
         const messageFromSender = this.state.emailMessage;
-        console.log('handlesubmit fired')
+        this.setState({
+            alertOpen: true,
+            emailAlertText: "Email is on it's way, confirmation will arrive shortly."
+        });
         axios({
             method: "POST", 
             url:"http://localhost:3005/send", 
@@ -119,12 +124,33 @@ class Contact extends Component {
             }
         }).then((response)=>{
             if (response.data.msg === 'success'){
-                alert("Message Sent."); 
-                // this.resetForm()
+                this.setState({
+                    alertOpen: true,
+                    emailAlertText: "Your email has been sent successfully. Expect to hear back within the next few days."
+                });
+                this.resetForm()
             }else if(response.data.msg === 'fail'){
-                alert("Message failed to send.")
+                this.setState({
+                    alertOpen: true,
+                    emailAlertText: "Unfortunately your email was not sent successfully. Please try and contact Randi through her Instagram."
+                });
             }
         })
+    }
+
+    handleClose() {
+        this.setState({
+            alertOpen: false
+        })
+    }
+
+    resetForm(){
+        this.setState({
+            emailerName: '',
+            emailSubject: 'General',
+            emailAddress: '',
+            emailMessage: ''
+        });
     }
 
 
@@ -148,13 +174,13 @@ class Contact extends Component {
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
                                     <form className={classes.container} noValidate autoComplete="off">
-                                        {/* <Typography variant='h6'>Send Message</Typography> */}
                                         <TextField
                                             id="outlined-name"
+                                            name="name"
                                             label="Name"
                                             className={classes.textField}
-                                            onChange={this.handleChange('name')}
                                             value={this.state.emailerName}
+                                            onChange={this.handleChange('emailerName')}
                                             margin="normal"
                                             variant="outlined"
                                             fullWidth
@@ -214,11 +240,16 @@ class Contact extends Component {
                                         />
 
                                     </form>
-                                    <button type="submit" onClick={this.handleSubmit.bind(this)} method="POST">Submit</button>
-                                    <ButtonBar
-                                        pageToPageLinkToString={this.state.contactToHomeLinkToString}
+                                    <ContactSubmitBtn
+                                        type="submit"
                                         pageButtonText={this.state.contactButtonText}
+                                        submitFunction={this.handleSubmit.bind(this)}
                                     />
+                                    <EmailAlert
+                                        openDialogBool={this.state.alertOpen}
+                                        emailAlertDialogue={this.state.emailAlertText}
+                                        emailAlertClose={this.handleClose.bind(this)}
+                                         />
                                 </Grid>
                             </Grid>
                         </Grid>
