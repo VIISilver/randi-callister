@@ -4,10 +4,11 @@ const router = express.Router();
 const nodemailer = require('nodemailer');
 
 const transport = {
-    host: 'smtp.outlook.com',
+    host: process.env.HOST,
+    port: 587,
     auth: {
-      user: 'do_not_reply_binary_llc@outlook.com',
-      pass: '%345Tert'
+      user: process.env.USERNAME,
+      pass: process.env.PASSWORD
     }
   }
   
@@ -22,16 +23,17 @@ const transport = {
   });
   
   router.post('/send', (req, res, next) => {
-    const name = req.body.name
-    const email = req.body.email
-    const message = req.body.message
-    const content = `name: ${name} \n email: ${email} \n message: ${message} `
+    const name = req.body.name;
+    const email = req.body.email;
+    const subject = req.body.subject;
+    const bodyText = req.body.messageText;
+    const content = `name: ${name} \n email: ${email} \n subject: ${subject} \n text body: ${bodyText} `;
   
     const mail = {
-      from: 'Jared Parker',
-      to: 'jared.parker7890@gmail.com',
-      subject: 'New Message from Contact Form',
-      text: 'Content'
+      from: name,
+      to: process.env.EMAILRECIPIENT,
+      subject: subject,
+      text: content
     }
   
     transporter.sendMail(mail, (err, data) => {

@@ -73,9 +73,9 @@ class Contact extends Component {
 
         this.state = {
             emailerName: 'Jared Parker',
-            emailSubject: 'General',
+            emailSubject: 'this is the subject',
             emailAddress: 'jared.parker7890@gmail.com',
-            emailMessage: 'Jello World',
+            emailMessage: 'I can only hope that this works',
             multiline: 'Controlled',
             contactButtonText: 'Send Message',
             contactToHomeLinkToString: '/',
@@ -105,15 +105,17 @@ class Contact extends Component {
         e.preventDefault();
         const emailSenderName = this.state.emailerName;
         const senderEmailAddress = this.state.emailAddress;
+        const senderEmailSubject = this.state.emailSubject;
         const messageFromSender = this.state.emailMessage;
         console.log('handlesubmit fired')
         axios({
             method: "POST", 
             url:"http://localhost:3005/send", 
             data: {
-                name: 'Jared Parker',   
-                email: 'jared.parker7890@gmail.com',  
-                messsage: 'for all that is holy please work'
+                name: emailSenderName,   
+                email: senderEmailAddress,  
+                subject: senderEmailSubject,
+                messageText: messageFromSender
             }
         }).then((response)=>{
             if (response.data.msg === 'success'){
