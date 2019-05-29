@@ -1,14 +1,17 @@
 require('dotenv').config();
 const express = require('express');
 const router = express.Router();
+const cors = require('cors');
 const nodemailer = require('nodemailer');
 
+const app = express();
+
 const transport = {
-    host: process.env.HOST,
+    host: EMAIL_CLIENT_HOST,
     port: 587,
     auth: {
-      user: process.env.USERNAME,
-      pass: process.env.PASSWORD
+      user: USERNAME,
+      pass: PASSWORD
     }
   }
   
@@ -22,7 +25,7 @@ const transport = {
     }
   });
   
-  router.post('/send', (req, res, next) => {
+  router.post('/api/send', cors(), (req, res, next) => {
     const name = req.body.name;
     const email = req.body.email;
     const subject = req.body.subject;
@@ -31,7 +34,7 @@ const transport = {
   
     const mail = {
       from: name,
-      to: process.env.EMAILRECIPIENT,
+      to: EMAILRECIPIENT,
       subject: subject,
       text: content
     }
