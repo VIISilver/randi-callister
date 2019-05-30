@@ -115,7 +115,7 @@ class Contact extends Component {
         });
         axios({
             method: "POST", 
-            url:"http://localhost:3005/api/send", 
+            url:"http://104.236.143.57:3005/api/send", 
             data: {
                 name: emailSenderName,   
                 email: senderEmailAddress,  
