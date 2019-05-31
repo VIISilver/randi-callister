@@ -11,8 +11,9 @@ import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 // import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
+// import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import './ShopItemCard.css';
 
 
 const styles = theme => ({
@@ -21,13 +22,7 @@ const styles = theme => ({
     marginTop: 75,
     padding: 5
   },
-  shopItemCardMedia: {
-    maxWidth: 300,
-    height: 'auto',
-    paddingTop: '100%', // 16:9
-    paddingBottom: 0,
-    backgroundPosition: 'top',
-  },
+  
   actions: {
     display: 'flex',
   },
@@ -64,7 +59,7 @@ class ShopItemCard extends React.Component {
           title={this.props.pageCardHeaderTitle}
         />
         <CardMedia
-          className={classes.shopItemCardMedia}
+          className={"shop-item-card-media"}
           image={this.props.pageCardImage}
           title="Shop, Item Card Image"
         />
