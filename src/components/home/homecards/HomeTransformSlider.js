@@ -9,8 +9,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import './HomeTransformSlider.css';
 import { Typography } from '@material-ui/core';
 
-const firstCarouselImage = require('../../../assets/client2-transformation.JPG');
-const secondCarouselImage = require('../../../assets/client1-transformation-v2.jpg');
+// const firstCarouselImage = require('../../../assets/client2-transformation.JPG');
+// const secondCarouselImage = require('../../../assets/client1-transformation-v2.jpg');
+const firstCarouselImage = require('../../../assets/image8.jpg');
+const secondCarouselImage = require('../../../assets/image8.jpg');
 
 const styles = theme => ({
   paper: {
@@ -84,17 +86,15 @@ class HomeTransformSlider extends Component {
         </div>
         <div className={classes.itemContainer}>
           <button
-            className={classnames(
-              "pagination-switch",
-              {["pag-switch-background"]: activationForButtons}
-              )}
+            className="pagination-switch"
+            style={activationForButtons ? {backgroundColor: '#000000'} :  {backgroundColor: '#FFFFFF'}}
             checked={firstChecked} onClick={this.handleChange} aria-label="Collapse"></button>
           <button
-            className={classnames(
-              "pagination-switch",
-              {["pag-switch-background"]: !activationForButtons}
-              )}
-            checked={secondChecked} onClick={this.handleChange} aria-label="Collapse"></button>
+            className="pagination-switch"
+            checked={secondChecked} 
+            onClick={this.handleChange} 
+            style={!activationForButtons ? {backgroundColor: '#000000'} :  {backgroundColor: '#FFFFFF'}}
+            aria-label="Collapse"></button>
         </div>
       </Grid>
     );
