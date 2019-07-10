@@ -13,8 +13,8 @@ const nutritionOnlyImage = require('../../../assets/The-Ultimate-Nutrition-Guide
 const styles = {
     bigAvatar: {
         margin: 10,
-        width: 150,
-        height: 150,
+        width: 100,
+        height: 106,
         borderRadius: 0
     },
     homeAboutSectionWrapper: {
