@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import classnames from 'classnames';
 
+// const logo = require('../../../assets/Logo FINAL Personal Trainer.png');
 const logo = require('../../../assets/Logo FINAL Personal Trainer.svg');
 // const facebook = require('../../../assets/social-facebook-box-blue-icon.png');
 // const twitter = require('../../../assets/social-twitter.png');
@@ -66,13 +67,11 @@ class Footer extends React.Component {
           <Grid item xs={9} className={classes.footerText}>
             <Typography color="inherit" className={classes.customFooterSize}>
               <img width={24} src={logo} alt="Randi Callister Running Woman Logo" />
-              <span className={classes.tagline}>Developed by Binary LLC</span>
+              <span className={classes.tagline}>Developed by Jared Parker</span>
             </Typography>
           </Grid>
           <Grid item xs={2} className={classes.socialBar}>
-            {/* <a href="https://facebook.com"target="_blank" rel="noopener noreferrer"><img className={classes.socialImages} src={facebook} alt="Blue and White Facebook Logo" /></a>
-            <a href="https://twitter.com"target="_blank" rel="noopener noreferrer"><img className={classes.socialImages} src={twitter} alt="Twitter Logo" /></a> */}
-            <a href="https://www.instagram.com/a_betterfit/" target="_blank" rel="noopener noreferrer"><img className={classes.socialImages} src={instagram} alt="Instagram Logo" /></a>
+            <a href="https://www.instagram.com/a_betterfit/"><img className={classes.socialImages} src={instagram} alt="Instagram Logo" /></a>
           </Grid>
         </Grid>
       </Grid>

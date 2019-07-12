@@ -15,7 +15,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Menu from './Menu';
 
-const logo = require('../../../assets/Logo FINAL Personal Trainer.png');
+const topBarLogo = require('../../../assets/Logo FINAL Personal Trainer.png');
 
 const styles = theme => ({
   appBar: {
@@ -128,7 +128,7 @@ class MobileTopbar extends Component {
                   <div className={classes.inline}>
                     <Typography variant="h6" color="inherit" noWrap>
                       <Link to='/' className={classes.link}>
-                        <img width={24} src={logo} alt="Randi Callister Running Woman Logo" />
+                        <img width={24} src={topBarLogo} alt="Randi Wolsey Branded Logo" />
                         <span className={classes.tagline}>Randi Wolsey</span>
                       </Link>
                     </Typography>
