@@ -15,7 +15,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Menu from './Menu';
 
-const topBarLogo = require('../../../assets/Logo FINAL Personal Trainer.png');
+const topBarLogo = require('../../../assets/Logo-FINAL-Personal-Trainer.png');
 
 const styles = theme => ({
   appBar: {

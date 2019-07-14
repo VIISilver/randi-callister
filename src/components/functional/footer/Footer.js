@@ -5,8 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import classnames from 'classnames';
 
-// const logo = require('../../../assets/Logo FINAL Personal Trainer.png');
-const logo = require('../../../assets/Logo FINAL Personal Trainer.svg');
+// const logo = require('../../../assets/Logo-FINAL-Personal-Trainer.png');
+const logo = require('../../../assets/Logo-FINAL-Personal-Trainer.svg');
 // const facebook = require('../../../assets/social-facebook-box-blue-icon.png');
 // const twitter = require('../../../assets/social-twitter.png');
 const instagram = require('../../../assets/social-instagram.png');
