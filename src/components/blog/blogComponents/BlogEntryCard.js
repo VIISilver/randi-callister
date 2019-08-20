@@ -18,6 +18,10 @@ const styles = theme => ({
   card: {
     maxWidth: 400,
     marginTop: 35,
+    [theme.breakpoints.up('lg')]: {
+        minWidth: 400,
+        marginRight: 35
+    }
   },
   media: {
     height: 375,

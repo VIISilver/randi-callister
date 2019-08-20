@@ -20,7 +20,11 @@ const styles = theme => ({
   shopItemCardWrapper: {
     maxWidth: 400,
     marginTop: 75,
-    padding: 5
+    padding: 5,
+    [theme.breakpoints.up('md')]: {
+        minWidth: 400,
+        marginRight: 35
+    }
   },
   
   actions: {

@@ -55,7 +55,7 @@ class ProTips extends Component {
     this.state = {
       blogPostCardImage: shoeWeightImage,
       blogPostCardTitle: 'Pro Tip 1',
-      blogVisibleSubText: 'Magna aliqua nulla officia consectetur anim ex.',
+      blogVisibleSubText: 'Magna aliqua nulla officia consectetur.',
       blogLongDate: 'March 29, 2019',
       blogNonVisible1: 'Duis excepteur Lorem dolor amet proident labore cupidatat minim ad proident officia aliqua amet.',
       blogNonVisible2: 'Veniam exercitation consequat velit amet et.',
@@ -64,7 +64,7 @@ class ProTips extends Component {
 
       blogPostCardImage1: buildingRainImage,
       blogPostCardTitle1: 'Pro Tip 2',
-      blogVisibleSubText1: 'Anim incididunt ad voluptate amet fugiat sunt voluptate sunt non anim ullamco fugiat.',
+      blogVisibleSubText1: 'Anim incididunt ad voluptate amet.',
       blogLongDate1: 'March 31, 2019',
       blog1NonVisible1: 'Ea sit dolore tempor qui do nisi deserunt minim esse laborum.',
       blog1NonVisible2: 'Tempor ipsum eu id occaecat anim pariatur minim dolore aliquip. Laborum pariatur id dolore magna id mollit sint sunt. Do fugiat nostrud esse id.',
@@ -73,7 +73,7 @@ class ProTips extends Component {
 
       blogPostCardImage2: mountainTopImage,
       blogPostCardTitle2: 'Pro Tip 3',
-      blogVisibleSubText2: 'Tempor et cillum dolore id reprehenderit duis sit labore.',
+      blogVisibleSubText2: 'Tempor et cillum dolore id reprehenderit.',
       blogLongDate2: 'April 3, 2019',
       blog2NonVisible1: 'Deserunt consequat nostrud laboris aute. Velit minim labore non est aliquip quis. Dolore cillum do dolor elit ex duis aliquip nulla aliquip aute. Lorem cillum non eiusmod voluptate ex reprehenderit non tempor cillum sunt do.',
       blog2NonVisible2: 'Aliquip amet aute proident tempor non duis ipsum duis irure exercitation proident nostrud do officia.',

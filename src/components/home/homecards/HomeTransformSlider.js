@@ -9,10 +9,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import './HomeTransformSlider.css';
 import { Typography } from '@material-ui/core';
 
-// const firstCarouselImage = require('../../../assets/client2-transformation.JPG');
-// const secondCarouselImage = require('../../../assets/client1-transformation-v2.jpg');
-const firstCarouselImage = require('../../../assets/image8.jpg');
-const secondCarouselImage = require('../../../assets/image8.jpg');
+const firstCarouselImage = require('../../../assets/client2-transformation.JPG');
+const secondCarouselImage = require('../../../assets/client1-transformation-v2.jpg');
+// const firstCarouselImage = require('../../../assets/image8.jpg');
+// const secondCarouselImage = require('../../../assets/image8.jpg');
 
 const styles = theme => ({
   paper: {
